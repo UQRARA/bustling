@@ -101,7 +101,7 @@ public final class DiffuserClient {
         boolean drawingRegion = ToolItems.isRegion(mc.player.getMainHandItem());
         boolean deleting = drawingRegion && ToolConfig.mode == ToolConfig.Mode.DELETE;
         CrowdData.Emitter hovered = null;
-        if (ToolItems.isDrawingTool(mc.player.getMainHandItem())) {
+        if (ToolItems.isDrawingTool(mc.player.getMainHandItem()) || ToolItems.isCopy(mc.player.getMainHandItem())) {
             hovered = ToolAim.fixedSelectionMode() ? EditTool.selected() : ToolAim.current(mc).diffuser();
         }
         Ring highlighted = deleting ? Ring.DELETE : Ring.TARGET;

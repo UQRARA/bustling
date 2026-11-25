@@ -12,6 +12,7 @@ public final class BustlingMixinPlugin implements IMixinConfigPlugin {
     public void onLoad(String mixinPackage){}
     public String getRefMapperConfig(){return null;}
     public boolean shouldApplyMixin(String target,String mixin){
+        if (mixin.endsWith("DynamicTextureUploadMixin")) return true;
         if (mixin.endsWith("DevicePlacementMixin") || mixin.endsWith("DeviceLifecycleMixin") || mixin.endsWith("DeviceSpawnerMixin")
                 || mixin.endsWith("DeviceRedstoneMixin")
                 || mixin.endsWith("ToolItemModelMixin") || mixin.endsWith("DeviceModelMixin")

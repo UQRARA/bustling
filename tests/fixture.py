@@ -247,6 +247,7 @@ public class ServerTickEvent {
     }
 }
 ''',
+'net.neoforged.neoforge.event.server.ServerAboutToStartEvent': 'public class ServerAboutToStartEvent {}',
 'net.neoforged.bus.api.Event': 'public class Event {}',
 'net.neoforged.bus.api.IEventBus': 'public interface IEventBus { <E extends Event> E post(E event); }',
 'net.neoforged.neoforge.event.level.BlockEvent': '''
@@ -347,16 +348,32 @@ public class CrowdData {
         public String id, type, dim, appearance;
         public double[] a,b;
         public double diffuserRadius, diffuserDecay, stepHeight;
+        public double speed = 1, size = 1.875, spacing = .9, spread = 1.2, width = 3, alpha = .35, maxDist = 96, pushRadius = 6;
         public int diffuserLimit, density, count, groundMode;
+        public int color = 15266559, slowLevel;
         public boolean enabled = true;
+        public boolean ground = true, avoid = true, collide = true, pushEnabled = true;
         public Boolean redstoneControlled;
         public List<double[]> path = new ArrayList<>();
         public List<MobWeight> mobs = new ArrayList<>();
-        public List<?> groundBlocks;
+        public List<SkinWeight> skins = new ArrayList<>();
+        public List<String> groundBlocks;
         public Emitter(String id, String type) { this.id=id; this.type=type; }
         public boolean isLine() { return "line".equals(type); }
         public void normalizeType() {}
-        public static class MobWeight {}
+        public void applyDensity() { count = density; }
+        public static class MobWeight {
+            public String id, nbt, name;
+            public double weight;
+            public MobWeight(String id, double weight, String nbt, String name) {
+                this.id = id; this.weight = weight; this.nbt = nbt; this.name = name;
+            }
+        }
+        public static class SkinWeight {
+            public String id;
+            public double weight;
+            public SkinWeight(String id, double weight) { this.id = id; this.weight = weight; }
+        }
     }
 }
 ''',

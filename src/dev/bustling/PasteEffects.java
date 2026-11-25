@@ -99,6 +99,7 @@ public final class PasteEffects {
     }
 
     private static Vec3 landingPoint(CrowdData.Emitter emitter, Vec3 hit) {
+        if (DiffuserData.isDiffuser(emitter)) return point(emitter.a);
         if (emitter.isLine()) return closestEdge(emitter.path, hit, false);
         if (CrowdBounds.inside(emitter, hit.x, hit.z, 0)) return hit;
         if (CrowdBounds.polygon(emitter)) return closestEdge(emitter.polygon, hit, true);

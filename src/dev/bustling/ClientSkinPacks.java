@@ -28,7 +28,8 @@ public final class ClientSkinPacks {
     private static PlayerModel<?> previewSlim;
 
     enum Source {
-        LOCAL("skin_pack.local"), SERVER("skin_pack.server"), EXAMPLE("skin_pack.example");
+        LOCAL("skin_pack.local"), SERVER("skin_pack.server"), EXAMPLE("skin_pack.example"),
+        YSM("skin_pack.ysm");
 
         final String label;
 
@@ -37,7 +38,11 @@ public final class ClientSkinPacks {
         }
     }
 
-    record Listing(String id, String name, String description, int count, Source source) {}
+    record Listing(String id, String name, String description, int count, Source source) {
+        String rowId() {
+            return source == Source.YSM ? YsmClientModels.rowId(id) : SkinPackFiles.ROW_PREFIX + id;
+        }
+    }
     private record Catalog(List<SkinPackFiles.Pack> local, List<SkinPackFiles.Pack> examples) {}
     private record WeightedSkin(SkinLibrary.Skin skin, int upperBound) {}
     private record LoadedPack(Listing listing, List<WeightedSkin> skins) {}
@@ -148,6 +153,7 @@ public final class ClientSkinPacks {
     }
 
     static Listing listing(String rowId) {
+        if (YsmClientModels.isModelRow(rowId)) return YsmClientModels.listing(rowId);
         LoadedPack pack = find(rowId);
         return pack == null ? null : pack.listing();
     }

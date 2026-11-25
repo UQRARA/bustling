@@ -13,6 +13,7 @@ public final class EnvironmentPopulationRegression {
         if (args.length != 0) {
             WorldSystem.load();
             require(!WorldSystem.environmentEnabled, "disabled setting survived restart");
+            require(WorldSystem.navigationBudget == 4 && WorldSystem.footsteps, "budget and audio survive restart");
             return;
         }
         curves();
@@ -64,6 +65,7 @@ public final class EnvironmentPopulationRegression {
         Files.writeString(WorldSystem.file(), "worldSystem.activeRadius=24\n");
         WorldSystem.load();
         require(WorldSystem.activeRadius == 24 && WorldSystem.environmentEnabled, "default on for an old config");
+        require(WorldSystem.navigationBudget == 1 && !WorldSystem.footsteps, "old settings get budget and audio defaults");
 
         CrowdData.Emitter area = emitter("a", "region", 59, "minecraft:overworld");
         CrowdData.Emitter diffuser = emitter("b", "diffuser", 41, "minecraft:overworld");
@@ -110,10 +112,16 @@ public final class EnvironmentPopulationRegression {
         level.gameTime++;
         require(WorldSystem.totalPlanned() < 50, "disabling eases toward the base budget");
         require(settle(level) == 50, "disabled restores the base budget");
+        WorldSystem.navigationBudget = 4;
+        WorldSystem.footsteps = true;
         WorldSystem.resetDefaults();
         require(WorldSystem.environmentEnabled, "reset restores the default switch state");
+        require(WorldSystem.navigationBudget == 1 && !WorldSystem.footsteps, "reset restores budget and audio defaults");
         WorldSystem.environmentEnabled = false;
+        WorldSystem.navigationBudget = 9;
+        WorldSystem.footsteps = true;
         WorldSystem.save();
+        require(WorldSystem.navigationBudget == 4, "safe upper limit for collision budget");
     }
 
     private static long settle(ClientLevel level) {

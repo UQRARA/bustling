@@ -9,7 +9,8 @@
     "CustomNpcOverlayMixin",
     "ToolItemModelMixin",
     "DeviceModelMixin",
-    "ClientDevicePlacementMixin"
+    "ClientDevicePlacementMixin",
+    "DynamicTextureUploadMixin"
   ],
   "injectors": {
     "defaultRequire": 0

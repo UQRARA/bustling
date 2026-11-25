@@ -18,6 +18,9 @@ public final class WorldScreen extends UiScreen {
     private int radiusWidth, standingWidth;
     private int displayedEnvironmentPercent;
     private boolean showFooter;
+    private UiButton footstepsButton;
+    private UiValue budgetValue;
+    private int soundY;
 
     public WorldScreen() { this(null); }
     public WorldScreen(Screen parent) { super(tr("common.settings")); this.parent = parent; }
@@ -48,13 +51,14 @@ public final class WorldScreen extends UiScreen {
         secondRuleY = panelH - 31;
         footerY = panelH - 19;
         int bodyBottom = showFooter ? secondRuleY - 4 : panelH - 4;
-        int rowPitch = Math.clamp((bodyBottom - 26) / 6, 12, 22);
+        int rowPitch = Math.clamp((bodyBottom - 26) / 7, 12, 22);
         rowHeight = Math.min(18, rowPitch);
-        firstY = Math.min(58, bodyBottom - 5 * rowPitch - rowHeight);
+        firstY = Math.min(58, bodyBottom - 6 * rowPitch - rowHeight);
         secondY = firstY + rowPitch;
         thirdY = secondY + rowPitch;
         fourthY = thirdY + rowPitch;
         behaviorY = fourthY + rowPitch;
+        soundY = behaviorY + 2 * rowPitch;
         firstRuleY = firstY - 5;
         boolean narrow = panelW < 280;
         systemButton = row(8, firstY, columnWidth, narrow ? tr("world.system_short") : tr("world.system"), UiIcons.WORLD_POWER,
@@ -81,9 +85,9 @@ public final class WorldScreen extends UiScreen {
                 () -> WorldSystem.effectiveStandingFraction() * 100,
                 v -> WorldSystem.setStandingFraction(v / 100.0),
                 tr("world.idle_tip"));
-        pushRadiusValue = value(rightColumn + columnWidth - radiusWidth, behaviorY, radiusWidth, 1, 30, 1,
+        pushRadiusValue = value(rightColumn + columnWidth - radiusWidth, behaviorY, radiusWidth, -WorldSystem.MAX_PLAYER_RADIUS, WorldSystem.MAX_PLAYER_RADIUS, 1,
                 () -> WorldSystem.playerRadius,
-                v -> { WorldSystem.playerRadius = (int)v; WorldSystem.save(); },
+                v -> { WorldSystem.playerRadius = (int)Math.round(v); WorldSystem.save(); },
                 tr("world.push_radius_tip"));
         avoidButton = row(rightColumn, fourthY, columnWidth, tr("world.avoid_blocks"), UiIcons.BEHAVIOR_AVOID,
                 () -> { WorldSystem.avoidBlocks = !WorldSystem.avoidBlocks; WorldSystem.save(); },
@@ -94,6 +98,13 @@ public final class WorldScreen extends UiScreen {
         environmentButton = row(8, behaviorY + rowPitch, columnWidth, tr("world.environment"), UiIcons.WORLD_ENVIRONMENT,
                 () -> { WorldSystem.environmentEnabled = !WorldSystem.environmentEnabled; WorldSystem.save(); },
                 tr("world.environment_tip"));
+        footstepsButton = row(rightColumn, behaviorY + rowPitch, columnWidth, tr("world.footsteps"), UiIcons.WORLD_SOUND,
+                () -> { WorldSystem.footsteps = !WorldSystem.footsteps; WorldSystem.save(); },
+                tr("world.footsteps_tip"));
+        budgetValue = value(8 + columnWidth - radiusWidth, soundY, radiusWidth, 1, WorldSystem.MAX_NAVIGATION_BUDGET, 1,
+                () -> WorldSystem.navigationBudget,
+                v -> { WorldSystem.navigationBudget = (int)Math.round(v); WorldSystem.save(); },
+                tr("world.cpu_budget_tip"));
         displayedEnvironmentPercent = 0;
         syncLocks();
     }
@@ -101,6 +112,7 @@ public final class WorldScreen extends UiScreen {
         if (radiusValue == null) return;
         pushRadiusValue.lock(!WorldSystem.avoidPlayers, tr("world.push_locked"));
         radiusValue.lock(!WorldSystem.activeEnabled, tr("world.active_locked"));
+        budgetValue.lock(!WorldSystem.activeEnabled, tr("world.active_locked"));
         String reason = tr("world.original_locked");
         totalValue.lock(WorldSystem.useEmitterCounts, reason);
         standingValue.lock(WorldSystem.useEmitterCounts, reason);
@@ -123,6 +135,7 @@ public final class WorldScreen extends UiScreen {
         avoidButton.setSelected(WorldSystem.avoidBlocks);
         pushButton.setSelected(WorldSystem.avoidPlayers);
         environmentButton.setSelected(WorldSystem.environmentEnabled);
+        footstepsButton.setSelected(WorldSystem.footsteps);
         int percent = WorldSystem.enabled && WorldSystem.environmentEnabled ? WorldSystem.environmentPercent() : 0;
         if (percent != displayedEnvironmentPercent) {
             displayedEnvironmentPercent = percent;
@@ -135,6 +148,7 @@ public final class WorldScreen extends UiScreen {
         label(gg, tr("common.people"), UiIcons.STAT_PEOPLE, rightColumn, thirdY + labelInset, fieldWidth);
         label(gg, panelW < 280 ? tr("common.stand_short") : tr("common.stand_ratio"), UiIcons.WORLD_STAND, 8, fourthY + labelInset, standingWidth);
         label(gg, panelW < 260 ? tr("common.radius") : tr("world.push_radius"), UiIcons.BEHAVIOR_PUSH, rightColumn, behaviorY + labelInset, radiusWidth);
+        label(gg, tr("world.cpu_budget"), UiIcons.WORLD_CPU, 8, soundY + labelInset, radiusWidth);
         if (showFooter) {
             UiKit.rule(gg, px(8), py(secondRuleY), panelW - 16);
             String state = !WorldSystem.enabled ? tr("world.disabled") : WorldSystem.activeEnabled

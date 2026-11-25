@@ -31,17 +31,19 @@ public final class WorldSystem {
     public static int playerRadius = 6;
     public static int maxTotal = 512;
     public static int activeRadius = 12;
+    public static int navigationBudget = 1;
+    public static boolean footsteps = false;
     public static double standingFraction = .35;
     public static final double DEFAULT_STANDING_FRACTION = .35;
     public static final int MAX_ACTIVE_RADIUS = 64;
+    public static final int MAX_NAVIGATION_BUDGET = 4;
+    public static final int MAX_PLAYER_RADIUS = 30;
     public static final int MAX_TOTAL = 1_000_000;
 
     /** Installed by client init; item/registry classes stay safe on dedicated servers. */
     public static Runnable onRuntimeReset;
     private static boolean loaded;
-    private static boolean appliedEnabled = enabled, appliedOriginal = useEmitterCounts;
-    private static int appliedMax = maxTotal;
-    private static double appliedStanding = DEFAULT_STANDING_FRACTION;
+    private static boolean appliedEnabled = enabled;
     private static final EnvironmentPopulation ENVIRONMENT = new EnvironmentPopulation();
     private static ClientLevel environmentWorld;
     private static long environmentTick;
@@ -59,11 +61,16 @@ public final class WorldSystem {
     }
 
     public static void normalize() {
-        playerRadius = Math.max(1, Math.min(30, playerRadius));
+        playerRadius = Math.clamp(playerRadius, -MAX_PLAYER_RADIUS, MAX_PLAYER_RADIUS);
         activeRadius = Math.max(1, Math.min(MAX_ACTIVE_RADIUS, activeRadius));
+        navigationBudget = Math.clamp(navigationBudget, 1, MAX_NAVIGATION_BUDGET);
         maxTotal = Math.max(0, Math.min(MAX_TOTAL, maxTotal));
         standingFraction = Double.isFinite(standingFraction)
                 ? Math.max(0, Math.min(1, standingFraction)) : .35;
+    }
+
+    static int playerInfluenceRadius() {
+        return avoidPlayers ? (playerRadius < 0 ? Math.max(2, -playerRadius) : playerRadius) : 0;
     }
 
     private static boolean bool(Properties p, String name, boolean fallback) {
@@ -97,6 +104,8 @@ public final class WorldSystem {
                 playerRadius = integer(p, "playerRadius", playerRadius);
                 maxTotal = integer(p, "maxTotal", maxTotal);
                 activeRadius = integer(p, "activeRadius", activeRadius);
+                navigationBudget = integer(p, "navigationBudget", 1);
+                footsteps = bool(p, "footsteps", false);
                 try { standingFraction = Double.parseDouble(p.getProperty("worldSystem.standingFraction", Double.toString(standingFraction))); }
                 catch (NumberFormatException bad) { standingFraction = .35; }
             } catch (IOException | IllegalArgumentException bad) {
@@ -105,16 +114,9 @@ public final class WorldSystem {
             }
         }
         normalize();
-        rememberApplied();
+        appliedEnabled = enabled;
         invalidate();
         if (!Files.exists(path)) save();
-    }
-
-    private static void rememberApplied() {
-        appliedEnabled = enabled;
-        appliedOriginal = useEmitterCounts;
-        appliedMax = maxTotal;
-        appliedStanding = effectiveStandingFraction();
     }
 
     public static void setEnabled(boolean value) {
@@ -142,7 +144,7 @@ public final class WorldSystem {
                 ? Math.max(0, Math.min(1, standingFraction)) : DEFAULT_STANDING_FRACTION;
     }
 
-    /** One transaction: restore all local defaults, persist once, clear runtime once. */
+    /** Restore and persist local defaults in one transaction. */
     public static void resetDefaults() {
         enabled = true;
         useEmitterCounts = true;
@@ -151,20 +153,16 @@ public final class WorldSystem {
         environmentEnabled = true;
         maxTotal = 512;
         activeRadius = 12;
+        navigationBudget = 1;
+        footsteps = false;
         standingFraction = DEFAULT_STANDING_FRACTION;
-        save(true);
+        save();
     }
 
     public static void save() {
-        save(false);
-    }
-
-    private static void save(boolean forceReset) {
         normalize();
-        boolean reset = forceReset || appliedEnabled != enabled || appliedOriginal != useEmitterCounts
-                || (!useEmitterCounts && appliedMax != maxTotal)
-                || Double.compare(appliedStanding, effectiveStandingFraction()) != 0;
-        rememberApplied();
+        boolean reset = appliedEnabled != enabled;
+        appliedEnabled = enabled;
         invalidate();
         if (reset && onRuntimeReset != null) onRuntimeReset.run();
         String text = "# Bustling client-local world panel; restart the client after editing this file.\n"
@@ -177,12 +175,16 @@ public final class WorldSystem {
                 + "# Active simulation radius: 1..64 blocks, measured from the local player.\n"
                 + "worldSystem.activeEnabled=" + activeEnabled + "\n"
                 + "worldSystem.activeRadius=" + activeRadius + "\n"
+                + "# Local collision budget multiplier: 1..4. Higher settings use more CPU.\n"
+                + "worldSystem.navigationBudget=" + navigationBudget + "\n"
+                + "worldSystem.footsteps=" + footsteps + "\n"
                 + "# Scale the planned population with daylight and local precipitation.\n"
                 + "worldSystem.environmentEnabled=" + environmentEnabled + "\n"
                 + "# Shadows are off by default. Shader packs control their final appearance.\n"
                 + "worldSystem.shadows=" + shadows + "\n"
                 + "worldSystem.avoidBlocks=" + avoidBlocks + "\n"
                 + "worldSystem.avoidPlayers=" + avoidPlayers + "\n"
+                + "# Player radius: positive avoids, negative approaches, 0 disables interaction.\n"
                 + "worldSystem.playerRadius=" + playerRadius + "\n"
                 + "# Custom-mode standing share: 0..1; preserved but inactive in original-count mode.\n"
                 + "# Original-count mode uses the fixed neutral standing share 0.35.\n"

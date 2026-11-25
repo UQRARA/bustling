@@ -29,6 +29,8 @@ public final class WorldClient {
         NeoForge.EVENT_BUS.addListener(WandLaser::draw);
         NeoForge.EVENT_BUS.addListener(PasteEffects::draw);
         NeoForge.EVENT_BUS.addListener(ToolParticles::tick);
+        NeoForge.EVENT_BUS.addListener(YsmClientModels::tick);
+        NeoForge.EVENT_BUS.addListener(EventPriority.LOWEST, YsmClientModels::hideNameTag);
         NeoForge.EVENT_BUS.addListener(ToolMotion::advance);
         NeoForge.EVENT_BUS.addListener(ToolAim::beginFrame);
         WorldSystem.onRuntimeReset = WorldClient::clear;
@@ -41,6 +43,7 @@ public final class WorldClient {
     private static void onLogout(ClientPlayerNetworkEvent.LoggingOut event) {
         PasteEffects.clear();
         ClientSkinPacks.clearRemote();
+        YsmClientModels.clear();
         ClientCrowdStore.resetSession();
     }
 
@@ -51,11 +54,14 @@ public final class WorldClient {
     }
 
     public static void clear() {
+        CrowdPresence.clear();
         WandLaser.clear();
         PasteEffects.clear();
         ToolParticles.clear();
         CrowdNavigation.clear();
+        CrowdFootsteps.clear();
         MobMotion.clear();
+        YsmClientModels.clearProxies();
         RenderPolicy.clear();
         CachedShadowCaster.clear();
         CrowdRenderer.clearRuntime();

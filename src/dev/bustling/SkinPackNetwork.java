@@ -8,6 +8,7 @@ import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
+import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartedEvent;
@@ -23,6 +24,7 @@ public final class SkinPackNetwork {
 
     public static void init(IEventBus modBus) {
         modBus.addListener(SkinPackNetwork::register);
+        NeoForge.EVENT_BUS.addListener(EventPriority.HIGHEST, YsmModelImports::prepare);
         NeoForge.EVENT_BUS.addListener(SkinPackNetwork::load);
         NeoForge.EVENT_BUS.addListener(SkinPackNetwork::clear);
     }

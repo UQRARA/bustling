@@ -16,6 +16,7 @@ final class SkinPackScreen extends UiScreen {
     private static final int PAD = 6;
     private static final int LIST_TOP = 42;
     private static final int ROW_PITCH = 22;
+    private static final int PNG_TOP = LIST_TOP + ROW_PITCH;
     private final EditScreen parent;
     private final String groupId;
     private List<ClientSkinPacks.Listing> rows = List.of();
@@ -40,7 +41,13 @@ final class SkinPackScreen extends UiScreen {
     @Override protected void buildWidgets() {
         revision = ClientSkinPacks.revision();
         rows = ClientSkinPacks.listings();
-        visibleRows = Math.max(1, (panelH - LIST_TOP - 28) / ROW_PITCH);
+        visibleRows = Math.max(1, (panelH - PNG_TOP - 28) / ROW_PITCH);
+        UiButton ysm = new UiButton(px(PAD), py(LIST_TOP), panelW - 2 * PAD, 18,
+                tr("ysm_pack.title"), UiIcons.ACT_FOLDER, UiButton.Style.BUTTON,
+                () -> Minecraft.getInstance().setScreen(new YsmPackScreen(this, parent, groupId, "")));
+        ysm.accent(accent).tip(tr("ysm_pack.open_tip"));
+        ysm.lock(!YsmSupport.available(), tr("ysm_pack.unavailable"));
+        addRenderableWidget(ysm);
         offset = Math.clamp(offset, 0, maxOffset());
         var emitter = EditTool.selected();
         var font = Minecraft.getInstance().font;
@@ -50,11 +57,11 @@ final class SkinPackScreen extends UiScreen {
             String details = tr("skin_pack.entry", "", source, row.count());
             String name = UiKit.ellipsis(font, row.name(), Math.max(0, panelW - 42 - font.width(details)));
             String label = tr("skin_pack.entry", name, source, row.count());
-            UiButton button = new UiButton(px(PAD), py(LIST_TOP + i * ROW_PITCH), panelW - 2 * PAD, 18,
+            UiButton button = new UiButton(px(PAD), py(PNG_TOP + i * ROW_PITCH), panelW - 2 * PAD, 18,
                     label, UiIcons.APPEARANCE_SKIN, UiButton.Style.BUTTON, () -> addPack(row));
             button.accent(accent);
             boolean assigned = emitter != null && emitter.mobs != null && emitter.mobs.stream()
-                    .anyMatch(weight -> weight != null && (SkinPackFiles.ROW_PREFIX + row.id()).equals(weight.id));
+                    .anyMatch(weight -> weight != null && row.rowId().equals(weight.id));
             button.setSelected(assigned);
             button.lock(assigned, tr("skin_pack.already_added"));
             if (!assigned && !row.description().isBlank()) {
@@ -68,7 +75,7 @@ final class SkinPackScreen extends UiScreen {
                 UiIcons.ACT_FOLDER, UiButton.Style.BUTTON, this::openFolder).accent(accent)
                 .tip(tr("skin_pack.open_folder_tip")));
         addRenderableWidget(new UiButton(px(2 * PAD + buttonWidth), py(footer), buttonWidth, 18, tr("skin_pack.reload"),
-                UiIcons.ACT_RESET, UiButton.Style.BUTTON, () -> ClientSkinPacks.reload()).accent(accent)
+                UiIcons.ACT_RESET, UiButton.Style.BUTTON, ClientSkinPacks::reload).accent(accent)
                 .tip(tr("skin_pack.reload_tip")));
         UiButton up = arrow(UiIcons.NAV_LEFT, panelW - 46, footer, -visibleRows);
         UiButton down = arrow(UiIcons.NAV_RIGHT, panelW - 24, footer, visibleRows);
@@ -112,7 +119,7 @@ final class SkinPackScreen extends UiScreen {
     private void addPack(ClientSkinPacks.Listing row) {
         CrowdData.Emitter group = EditTool.selected();
         if (group == null || !groupId.equals(group.id) || AppearanceModes.isWhite(group)) return;
-        String id = SkinPackFiles.ROW_PREFIX + row.id();
+        String id = row.rowId();
         if (ClientSkinPacks.listing(id) == null) return;
         AppearanceModes.addMob(group, id, "", row.name());
         Minecraft.getInstance().setScreen(parent);
@@ -124,7 +131,7 @@ final class SkinPackScreen extends UiScreen {
     }
 
     @Override public boolean mouseScrolled(double x, double y, double dx, double dy) {
-        if (x >= left && x < left + panelW && y >= py(LIST_TOP) && y < py(panelH - 26)) {
+        if (x >= left && x < left + panelW && y >= py(PNG_TOP) && y < py(panelH - 26)) {
             scroll(-(int) Math.signum(dy));
             return true;
         }

@@ -1,7 +1,7 @@
 package dev.bustling;
 
 public final class UiIcons {
-    public static final int COUNT = 41;
+    public static final int COUNT = 43;
 
     public static final int MODE_AREA = 0;
     public static final int MODE_PATH = 1;
@@ -46,6 +46,8 @@ public final class UiIcons {
     public static final int FALLOFF = 38;
     public static final int WORLD_ENVIRONMENT = 39;
     public static final int ACT_FOLDER = 40;
+    public static final int WORLD_CPU = 41;
+    public static final int WORLD_SOUND = 42;
 
     private static final int[][] UV = new int[COUNT][];
 

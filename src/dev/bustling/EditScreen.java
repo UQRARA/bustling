@@ -142,6 +142,10 @@ public final class EditScreen extends UiScreen {
     }
 
     private static String mobName(CrowdData.Emitter.MobWeight weight) {
+        if (YsmClientModels.isModelRow(weight.id)) {
+            var model = ClientSkinPacks.listing(weight.id);
+            return model != null ? model.name() : tr("skin_pack.missing", weight.name);
+        }
         if (SkinPackFiles.isPackRow(weight.id)) {
             var pack = ClientSkinPacks.listing(weight.id);
             if (pack != null) return pack.name();
@@ -739,7 +743,8 @@ public final class EditScreen extends UiScreen {
             }
             return;
         }
-        if (weight != failedPreview && renderPreview(gg, weight, x, y)) return;
+        if ((weight != failedPreview || YsmClientModels.isModelRow(weight.id))
+                && renderPreview(gg, weight, x, y)) return;
         failedPreview = weight;
         UiKit.textCenter(gg, tr("edit.no_preview"), x + previewWidth / 2, y + listHeight / 2, UiTheme.dim);
     }
@@ -767,7 +772,9 @@ public final class EditScreen extends UiScreen {
 
     private boolean renderPreview(GuiGraphics gg, CrowdData.Emitter.MobWeight weight, int x, int y) {
         try {
-            Entity entity = AppearanceModes.preview(weight);
+            Entity entity = YsmClientModels.isModelRow(weight.id)
+                    ? YsmClientModels.instance("ysm-preview", 0, weight.id, "")
+                    : AppearanceModes.preview(weight);
             if (entity == null) return false;
             entity.setPos(0.0, 0.0, 0.0);
             entity.setYRot(0.0f);

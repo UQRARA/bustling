@@ -83,7 +83,7 @@ public final class ServerCrowdStore {
                     if (!DiffuserData.isDiffuser(edit)) continue;
                     CrowdData.Emitter e = DEVICES.get(edit.id);
                     if (e == null || !e.dim.equals(edit.dim)) continue;
-                    DiffuserData.applyEdit(e, edit);
+                    CrowdSettings.applyDeviceSettings(e, edit);
                     if (edit.redstoneControlled != null && !edit.redstoneControlled.equals(e.redstoneControlled)) {
                         e.redstoneControlled = edit.redstoneControlled;
                         e.enabled = !edit.redstoneControlled || readDevicePower(e, sender);
