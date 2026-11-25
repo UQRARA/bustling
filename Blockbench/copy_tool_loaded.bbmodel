@@ -1,0 +1,2311 @@
+{
+  "meta": {
+    "format_version": "4.10",
+    "model_format": "java_block",
+    "box_uv": false
+  },
+  "name": "复制工具 · 剪贴板有内容",
+  "resolution": {
+    "width": 128,
+    "height": 128
+  },
+  "elements": [
+    {
+      "name": "书脊",
+      "type": "cube",
+      "to": [
+        8.55,
+        1.55,
+        13
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "17e71dff-0000-595e-a79e-09555b550dfb",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            43,
+            51,
+            45,
+            54
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            84,
+            43,
+            94,
+            46
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            43,
+            51,
+            45,
+            54
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            84,
+            43,
+            94,
+            46
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            13,
+            20,
+            15,
+            30
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            13,
+            20,
+            15,
+            30
+          ]
+        }
+      },
+      "from": [
+        7.45,
+        -0.5,
+        3
+      ]
+    },
+    {
+      "name": "书脊扣",
+      "type": "cube",
+      "to": [
+        8.55,
+        0.5,
+        3.05
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "c2add2b1-c0a4-59f3-acb6-5dd07a08bd5e",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            44,
+            75,
+            46,
+            76
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            44,
+            75,
+            46,
+            76
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            44,
+            75,
+            46,
+            76
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            44,
+            75,
+            46,
+            76
+          ]
+        }
+      },
+      "from": [
+        7.45,
+        -0.5,
+        2.5
+      ]
+    },
+    {
+      "name": "皮面 左页",
+      "type": "cube",
+      "to": [
+        8,
+        0.75,
+        13
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        -22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "6da284b6-2804-5115-9030-9674cb62bada",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            65,
+            70,
+            72,
+            71
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            99,
+            64,
+            109,
+            65
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            65,
+            70,
+            72,
+            71
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            99,
+            64,
+            109,
+            65
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            104,
+            2,
+            111,
+            12
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            104,
+            2,
+            111,
+            12
+          ]
+        }
+      },
+      "from": [
+        1.2,
+        0.05,
+        3
+      ]
+    },
+    {
+      "name": "纸叠 左页",
+      "type": "cube",
+      "to": [
+        8,
+        1.5,
+        12.6
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        -22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "0f35ad9a-745a-5d0f-9112-56078401c4ef",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            76,
+            70,
+            83,
+            71
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            113,
+            64,
+            123,
+            65
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            76,
+            70,
+            83,
+            71
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            113,
+            64,
+            123,
+            65
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            115,
+            2,
+            122,
+            12
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            2,
+            20,
+            9,
+            30
+          ]
+        }
+      },
+      "from": [
+        1.45,
+        0.65,
+        3.4
+      ]
+    },
+    {
+      "name": "护角 左页",
+      "type": "cube",
+      "to": [
+        2.2,
+        0.81,
+        13
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        -22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "25b19077-e4ac-5ab8-a3c1-0d92e5601fe2",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            44,
+            75,
+            46,
+            76
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            44,
+            75,
+            46,
+            76
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            44,
+            75,
+            46,
+            76
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            44,
+            75,
+            46,
+            76
+          ]
+        }
+      },
+      "from": [
+        1.2,
+        0.15,
+        12
+      ]
+    },
+    {
+      "name": "皮面 右页",
+      "type": "cube",
+      "to": [
+        14.8,
+        0.75,
+        13
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "1ce863a4-a872-59bd-b3e6-7b7cd8bbe71f",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            65,
+            70,
+            72,
+            71
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            99,
+            64,
+            109,
+            65
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            65,
+            70,
+            72,
+            71
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            99,
+            64,
+            109,
+            65
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            104,
+            2,
+            111,
+            12
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            104,
+            2,
+            111,
+            12
+          ]
+        }
+      },
+      "from": [
+        8,
+        0.05,
+        3
+      ]
+    },
+    {
+      "name": "纸叠 右页",
+      "type": "cube",
+      "to": [
+        14.55,
+        1.5,
+        12.6
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "b97f10f5-bc44-51c7-99a1-ac18f0fa1bc3",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            76,
+            70,
+            83,
+            71
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            113,
+            64,
+            123,
+            65
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            76,
+            70,
+            83,
+            71
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            113,
+            64,
+            123,
+            65
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            115,
+            2,
+            122,
+            12
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            2,
+            20,
+            9,
+            30
+          ]
+        }
+      },
+      "from": [
+        8,
+        0.65,
+        3.4
+      ]
+    },
+    {
+      "name": "护角 右页",
+      "type": "cube",
+      "to": [
+        14.8,
+        0.81,
+        4
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "415ab6e4-4b2d-543f-83ab-22d9846506e8",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        }
+      },
+      "from": [
+        13.8,
+        0.15,
+        3
+      ]
+    },
+    {
+      "name": "书签 1",
+      "type": "cube",
+      "to": [
+        15.370000000000001,
+        1.2,
+        4.58
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "806425c4-c6ab-5321-94f3-3b8a04c7880f",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            19,
+            58,
+            23,
+            60
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            19,
+            58,
+            23,
+            60
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            19,
+            58,
+            23,
+            60
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            19,
+            58,
+            23,
+            60
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            74,
+            34,
+            80,
+            38
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            19,
+            58,
+            23,
+            60
+          ]
+        }
+      },
+      "from": [
+        14.15,
+        0.86,
+        3.92
+      ]
+    },
+    {
+      "name": "书签 2",
+      "type": "cube",
+      "to": [
+        15.870000000000001,
+        1.2,
+        5.82
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "a08bcf83-ec7d-5c7f-87ee-90c83eae13ea",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            27,
+            58,
+            31,
+            60
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            27,
+            58,
+            31,
+            60
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            27,
+            58,
+            31,
+            60
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            27,
+            58,
+            31,
+            60
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            84,
+            34,
+            90,
+            38
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            27,
+            58,
+            31,
+            60
+          ]
+        }
+      },
+      "from": [
+        14.15,
+        0.86,
+        5.05
+      ]
+    },
+    {
+      "name": "书签 3",
+      "type": "cube",
+      "to": [
+        15.51,
+        1.2,
+        8.75
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "2b576eee-569c-559c-8ef2-e2f96c2ef940",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            35,
+            58,
+            39,
+            60
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            35,
+            58,
+            39,
+            60
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            35,
+            58,
+            39,
+            60
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            35,
+            58,
+            39,
+            60
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            94,
+            34,
+            100,
+            38
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            35,
+            58,
+            39,
+            60
+          ]
+        }
+      },
+      "from": [
+        14.15,
+        0.86,
+        8.15
+      ]
+    },
+    {
+      "name": "书签 4",
+      "type": "cube",
+      "to": [
+        15.73,
+        1.2,
+        11.64
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "109fbf88-82d6-5099-8581-7dd1affc39dc",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            43,
+            58,
+            47,
+            60
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            43,
+            58,
+            47,
+            60
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            43,
+            58,
+            47,
+            60
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            43,
+            58,
+            47,
+            60
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            104,
+            34,
+            110,
+            38
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            43,
+            58,
+            47,
+            60
+          ]
+        }
+      },
+      "from": [
+        14.15,
+        0.86,
+        10.73
+      ]
+    },
+    {
+      "name": "附魔符文 COPY 1",
+      "type": "cube",
+      "to": [
+        2.5900000000000003,
+        1.523,
+        5.534999999999999
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        -22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "f178e5ed-43ab-54d0-b060-38d52ba3b965",
+      "faces": {
+        "up": {
+          "texture": 1,
+          "uv": [
+            24,
+            32,
+            26,
+            39
+          ]
+        }
+      },
+      "from": [
+        2.2100000000000004,
+        1.523,
+        4.1
+      ]
+    },
+    {
+      "name": "附魔符文 COPY 2",
+      "type": "cube",
+      "to": [
+        4.26,
+        1.523,
+        5.534999999999999
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        -22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "be4a25cf-4a55-5e3f-9dd2-8ecc69039302",
+      "faces": {
+        "up": {
+          "texture": 1,
+          "uv": [
+            120,
+            32,
+            124,
+            39
+          ]
+        }
+      },
+      "from": [
+        3.5,
+        1.523,
+        4.1
+      ]
+    },
+    {
+      "name": "附魔符文 COPY 3",
+      "type": "cube",
+      "to": [
+        5.6450000000000005,
+        1.523,
+        5.534999999999999
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        -22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "b21b1063-dce7-5350-ad36-6cdb63efee38",
+      "faces": {
+        "up": {
+          "texture": 1,
+          "uv": [
+            0,
+            40,
+            3,
+            47
+          ]
+        }
+      },
+      "from": [
+        5.075,
+        1.523,
+        4.1
+      ]
+    },
+    {
+      "name": "附魔符文 COPY 4",
+      "type": "cube",
+      "to": [
+        7.125,
+        1.523,
+        5.534999999999999
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        -22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "9fce8870-4dd2-5735-8149-ffae22245639",
+      "faces": {
+        "up": {
+          "texture": 1,
+          "uv": [
+            72,
+            40,
+            75,
+            47
+          ]
+        }
+      },
+      "from": [
+        6.555,
+        1.523,
+        4.1
+      ]
+    },
+    {
+      "name": "附魔符文 AREA 1",
+      "type": "cube",
+      "to": [
+        2.875,
+        1.523,
+        8.084999999999999
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        -22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "01e229fb-defa-50c3-bed0-dbcdcd0e950c",
+      "faces": {
+        "up": {
+          "texture": 1,
+          "uv": [
+            8,
+            32,
+            13,
+            39
+          ]
+        }
+      },
+      "from": [
+        1.9250000000000003,
+        1.523,
+        6.6499999999999995
+      ]
+    },
+    {
+      "name": "附魔符文 AREA 2",
+      "type": "cube",
+      "to": [
+        4.26,
+        1.523,
+        8.084999999999999
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        -22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "7c423ec9-8291-53be-8acd-91cdf9f79475",
+      "faces": {
+        "up": {
+          "texture": 1,
+          "uv": [
+            16,
+            40,
+            20,
+            47
+          ]
+        }
+      },
+      "from": [
+        3.5,
+        1.523,
+        6.6499999999999995
+      ]
+    },
+    {
+      "name": "附魔符文 AREA 3",
+      "type": "cube",
+      "to": [
+        5.835000000000001,
+        1.523,
+        8.084999999999999
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        -22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "8ad00fcf-86bb-5d90-817c-a0151a4c938c",
+      "faces": {
+        "up": {
+          "texture": 1,
+          "uv": [
+            40,
+            32,
+            45,
+            39
+          ]
+        }
+      },
+      "from": [
+        4.885000000000001,
+        1.523,
+        6.6499999999999995
+      ]
+    },
+    {
+      "name": "附魔符文 AREA 4",
+      "type": "cube",
+      "to": [
+        7.315,
+        1.523,
+        8.084999999999999
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        -22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "9512c270-bc42-55ab-a470-3ecb551c5f03",
+      "faces": {
+        "up": {
+          "texture": 1,
+          "uv": [
+            8,
+            32,
+            13,
+            39
+          ]
+        }
+      },
+      "from": [
+        6.365,
+        1.523,
+        6.6499999999999995
+      ]
+    },
+    {
+      "name": "附魔符文 SYNC 1",
+      "type": "cube",
+      "to": [
+        2.5900000000000003,
+        1.523,
+        10.635
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        -22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "c60c90a7-5bfb-5ca9-9c80-f43cc2360ce9",
+      "faces": {
+        "up": {
+          "texture": 1,
+          "uv": [
+            24,
+            40,
+            26,
+            47
+          ]
+        }
+      },
+      "from": [
+        2.2100000000000004,
+        1.523,
+        9.2
+      ]
+    },
+    {
+      "name": "附魔符文 SYNC 2",
+      "type": "cube",
+      "to": [
+        4.165,
+        1.523,
+        10.635
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        -22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "41519fe4-b20a-5a24-9057-c21c799b07ac",
+      "faces": {
+        "up": {
+          "texture": 1,
+          "uv": [
+            72,
+            40,
+            75,
+            47
+          ]
+        }
+      },
+      "from": [
+        3.5949999999999998,
+        1.523,
+        9.2
+      ]
+    },
+    {
+      "name": "附魔符文 SYNC 3",
+      "type": "cube",
+      "to": [
+        5.74,
+        1.523,
+        10.635
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        -22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "11af1745-abb2-5725-9ba6-e7419d28b854",
+      "faces": {
+        "up": {
+          "texture": 1,
+          "uv": [
+            112,
+            32,
+            116,
+            39
+          ]
+        }
+      },
+      "from": [
+        4.98,
+        1.523,
+        9.2
+      ]
+    },
+    {
+      "name": "附魔符文 SYNC 4",
+      "type": "cube",
+      "to": [
+        7.029999999999999,
+        1.523,
+        10.635
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        -22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "0974233c-d76b-5ba2-9209-3a83a92363d8",
+      "faces": {
+        "up": {
+          "texture": 1,
+          "uv": [
+            24,
+            32,
+            26,
+            39
+          ]
+        }
+      },
+      "from": [
+        6.6499999999999995,
+        1.523,
+        9.2
+      ]
+    },
+    {
+      "name": "附魔符文 DATA 1",
+      "type": "cube",
+      "to": [
+        9.635,
+        1.523,
+        5.125
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "7445998c-be10-5b2f-8c21-e2dfb22e3d02",
+      "faces": {
+        "up": {
+          "texture": 1,
+          "uv": [
+            32,
+            32,
+            37,
+            37
+          ]
+        }
+      },
+      "from": [
+        8.685,
+        1.523,
+        4.1
+      ]
+    },
+    {
+      "name": "附魔符文 DATA 2",
+      "type": "cube",
+      "to": [
+        11.115,
+        1.523,
+        5.534999999999999
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "b1d30c59-1a4c-577d-9ed2-8f7eb629d60b",
+      "faces": {
+        "up": {
+          "texture": 1,
+          "uv": [
+            8,
+            32,
+            13,
+            39
+          ]
+        }
+      },
+      "from": [
+        10.165000000000001,
+        1.523,
+        4.1
+      ]
+    },
+    {
+      "name": "附魔符文 DATA 3",
+      "type": "cube",
+      "to": [
+        12.595,
+        1.523,
+        5.534999999999999
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "27c08bb5-7cb3-5724-a1be-706a12980176",
+      "faces": {
+        "up": {
+          "texture": 1,
+          "uv": [
+            32,
+            40,
+            37,
+            47
+          ]
+        }
+      },
+      "from": [
+        11.645000000000001,
+        1.523,
+        4.1
+      ]
+    },
+    {
+      "name": "附魔符文 DATA 4",
+      "type": "cube",
+      "to": [
+        14.075000000000001,
+        1.523,
+        5.534999999999999
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "dc98d6e2-c50c-54b0-8a5a-122abf8cb88d",
+      "faces": {
+        "up": {
+          "texture": 1,
+          "uv": [
+            8,
+            32,
+            13,
+            39
+          ]
+        }
+      },
+      "from": [
+        13.125000000000002,
+        1.523,
+        4.1
+      ]
+    },
+    {
+      "name": "附魔符文 PATH 1",
+      "type": "cube",
+      "to": [
+        9.445,
+        1.523,
+        8.084999999999999
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "d40d669c-571b-5504-8656-1d4f9b1265a1",
+      "faces": {
+        "up": {
+          "texture": 1,
+          "uv": [
+            0,
+            40,
+            3,
+            47
+          ]
+        }
+      },
+      "from": [
+        8.875,
+        1.523,
+        6.6499999999999995
+      ]
+    },
+    {
+      "name": "附魔符文 PATH 2",
+      "type": "cube",
+      "to": [
+        11.115,
+        1.523,
+        8.084999999999999
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "3df6acb7-db98-5537-addd-1ad0ff615875",
+      "faces": {
+        "up": {
+          "texture": 1,
+          "uv": [
+            8,
+            32,
+            13,
+            39
+          ]
+        }
+      },
+      "from": [
+        10.165000000000001,
+        1.523,
+        6.6499999999999995
+      ]
+    },
+    {
+      "name": "附魔符文 PATH 3",
+      "type": "cube",
+      "to": [
+        12.595,
+        1.523,
+        8.084999999999999
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "40ec20ac-f271-58a6-8439-b28ee8f8d5bc",
+      "faces": {
+        "up": {
+          "texture": 1,
+          "uv": [
+            32,
+            40,
+            37,
+            47
+          ]
+        }
+      },
+      "from": [
+        11.645000000000001,
+        1.523,
+        6.6499999999999995
+      ]
+    },
+    {
+      "name": "附魔符文 PATH 4",
+      "type": "cube",
+      "to": [
+        14.075000000000001,
+        1.523,
+        8.084999999999999
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "4b883ac6-46ae-5afe-a20a-876b62643f12",
+      "faces": {
+        "up": {
+          "texture": 1,
+          "uv": [
+            64,
+            32,
+            69,
+            39
+          ]
+        }
+      },
+      "from": [
+        13.125000000000002,
+        1.523,
+        6.6499999999999995
+      ]
+    },
+    {
+      "name": "附魔符文 FLOW 1",
+      "type": "cube",
+      "to": [
+        9.635,
+        1.523,
+        9.815
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "b63863ea-92db-56f3-a0e8-3f63fc45c759",
+      "faces": {
+        "up": {
+          "texture": 1,
+          "uv": [
+            48,
+            32,
+            53,
+            35
+          ]
+        }
+      },
+      "from": [
+        8.685,
+        1.523,
+        9.2
+      ]
+    },
+    {
+      "name": "附魔符文 FLOW 2",
+      "type": "cube",
+      "to": [
+        10.925,
+        1.523,
+        10.635
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "200c744f-c736-5f10-b9a4-7f936b42c738",
+      "faces": {
+        "up": {
+          "texture": 1,
+          "uv": [
+            96,
+            32,
+            99,
+            39
+          ]
+        }
+      },
+      "from": [
+        10.355,
+        1.523,
+        9.2
+      ]
+    },
+    {
+      "name": "附魔符文 FLOW 3",
+      "type": "cube",
+      "to": [
+        12.5,
+        1.523,
+        10.635
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "f7a5f344-06ee-56cc-b43c-49089ae9bd7a",
+      "faces": {
+        "up": {
+          "texture": 1,
+          "uv": [
+            120,
+            32,
+            124,
+            39
+          ]
+        }
+      },
+      "from": [
+        11.74,
+        1.523,
+        9.2
+      ]
+    },
+    {
+      "name": "附魔符文 FLOW 4",
+      "type": "cube",
+      "to": [
+        14.075000000000001,
+        1.523,
+        10.43
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "6c2a5650-f0a3-533b-a65a-2caa8cb2776c",
+      "faces": {
+        "up": {
+          "texture": 1,
+          "uv": [
+            56,
+            42,
+            61,
+            46
+          ]
+        }
+      },
+      "from": [
+        13.125000000000002,
+        1.523,
+        9.61
+      ]
+    }
+  ],
+  "outliner": [
+    {
+      "name": "书脊",
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "color": 0,
+      "export": true,
+      "locked": false,
+      "visibility": true,
+      "isOpen": true,
+      "uuid": "a54a0dcd-8e51-5b79-a177-bd8279ba5083",
+      "children": [
+        "17e71dff-0000-595e-a79e-09555b550dfb",
+        "c2add2b1-c0a4-59f3-acb6-5dd07a08bd5e"
+      ]
+    },
+    {
+      "name": "左页",
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "color": 0,
+      "export": true,
+      "locked": false,
+      "visibility": true,
+      "isOpen": true,
+      "uuid": "1bf91d9c-5a6d-5e08-9817-5be756160acd",
+      "children": [
+        "6da284b6-2804-5115-9030-9674cb62bada",
+        "0f35ad9a-745a-5d0f-9112-56078401c4ef",
+        "25b19077-e4ac-5ab8-a3c1-0d92e5601fe2"
+      ]
+    },
+    {
+      "name": "右页",
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "color": 0,
+      "export": true,
+      "locked": false,
+      "visibility": true,
+      "isOpen": true,
+      "uuid": "3dc8849f-03b7-51dd-83cc-4f9a53a6ae89",
+      "children": [
+        "1ce863a4-a872-59bd-b3e6-7b7cd8bbe71f",
+        "b97f10f5-bc44-51c7-99a1-ac18f0fa1bc3",
+        "415ab6e4-4b2d-543f-83ab-22d9846506e8"
+      ]
+    },
+    {
+      "name": "书签",
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "color": 0,
+      "export": true,
+      "locked": false,
+      "visibility": true,
+      "isOpen": true,
+      "uuid": "fdf46f02-cf4e-5698-b9bd-4a25c22af8aa",
+      "children": [
+        "806425c4-c6ab-5321-94f3-3b8a04c7880f",
+        "a08bcf83-ec7d-5c7f-87ee-90c83eae13ea",
+        "2b576eee-569c-559c-8ef2-e2f96c2ef940",
+        "109fbf88-82d6-5099-8581-7dd1affc39dc"
+      ]
+    },
+    {
+      "name": "发光符文",
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "color": 0,
+      "export": true,
+      "locked": false,
+      "visibility": true,
+      "isOpen": true,
+      "uuid": "1d67f446-bef7-514c-a6b5-28648f99433b",
+      "children": [
+        "f178e5ed-43ab-54d0-b060-38d52ba3b965",
+        "be4a25cf-4a55-5e3f-9dd2-8ecc69039302",
+        "b21b1063-dce7-5350-ad36-6cdb63efee38",
+        "9fce8870-4dd2-5735-8149-ffae22245639",
+        "01e229fb-defa-50c3-bed0-dbcdcd0e950c",
+        "7c423ec9-8291-53be-8acd-91cdf9f79475",
+        "8ad00fcf-86bb-5d90-817c-a0151a4c938c",
+        "9512c270-bc42-55ab-a470-3ecb551c5f03",
+        "c60c90a7-5bfb-5ca9-9c80-f43cc2360ce9",
+        "41519fe4-b20a-5a24-9057-c21c799b07ac",
+        "11af1745-abb2-5725-9ba6-e7419d28b854",
+        "0974233c-d76b-5ba2-9209-3a83a92363d8",
+        "7445998c-be10-5b2f-8c21-e2dfb22e3d02",
+        "b1d30c59-1a4c-577d-9ed2-8f7eb629d60b",
+        "27c08bb5-7cb3-5724-a1be-706a12980176",
+        "dc98d6e2-c50c-54b0-8a5a-122abf8cb88d",
+        "d40d669c-571b-5504-8656-1d4f9b1265a1",
+        "3df6acb7-db98-5537-addd-1ad0ff615875",
+        "40ec20ac-f271-58a6-8439-b28ee8f8d5bc",
+        "4b883ac6-46ae-5afe-a20a-876b62643f12",
+        "b63863ea-92db-56f3-a0e8-3f63fc45c759",
+        "200c744f-c736-5f10-b9a4-7f936b42c738",
+        "f7a5f344-06ee-56cc-b43c-49089ae9bd7a",
+        "6c2a5650-f0a3-533b-a65a-2caa8cb2776c"
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "name": "tools.png",
+      "relative_path": "贴图/tools.png",
+      "folder": "block/bustling_models",
+      "namespace": "bustling",
+      "id": "0",
+      "particle": true,
+      "render_mode": "default",
+      "width": 128,
+      "height": 128,
+      "uv_width": 128,
+      "uv_height": 128,
+      "saved": false,
+      "mode": "bitmap",
+      "uuid": "fbc8e8e1-c141-510c-a799-7f883e8a08dc",
+      "source": "data:image/png;base64,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"
+    },
+    {
+      "name": "ascii_sga.png",
+      "relative_path": "../native/minecraft/textures/font/ascii_sga.png",
+      "folder": "font",
+      "namespace": "minecraft",
+      "id": "1",
+      "particle": false,
+      "render_mode": "default",
+      "width": 128,
+      "height": 128,
+      "uv_width": 128,
+      "uv_height": 128,
+      "saved": true,
+      "mode": "link",
+      "uuid": "c143d68e-46ee-58b6-843b-33e75c4ae6f5",
+      "path": "/workspace/scratch/bustling-bbfix9-audit/native/minecraft/textures/font/ascii_sga.png"
+    }
+  ],
+  "display": {
+    "gui": {
+      "rotation": [
+        52,
+        16,
+        1
+      ],
+      "translation": [
+        0,
+        3.6,
+        0
+      ],
+      "scale": [
+        0.88,
+        0.88,
+        0.88
+      ]
+    },
+    "ground": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        3,
+        0
+      ],
+      "scale": [
+        0.47,
+        0.47,
+        0.47
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.72,
+        0.72,
+        0.72
+      ]
+    },
+    "head": {
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "translation": [
+        0,
+        7,
+        0
+      ],
+      "scale": [
+        0.65,
+        0.65,
+        0.65
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        53,
+        12,
+        0
+      ],
+      "translation": [
+        -3.1364,
+        5.9925,
+        2.5301
+      ],
+      "scale": [
+        0.63,
+        0.63,
+        0.63
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        53,
+        12,
+        0
+      ],
+      "translation": [
+        -3.1364,
+        5.9925,
+        2.5301
+      ],
+      "scale": [
+        0.63,
+        0.63,
+        0.63
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        55,
+        23,
+        5
+      ],
+      "translation": [
+        -3.6675,
+        3.9187,
+        3.2679
+      ],
+      "scale": [
+        0.71,
+        0.71,
+        0.71
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        55,
+        23,
+        5
+      ],
+      "translation": [
+        -3.6675,
+        3.9187,
+        3.2679
+      ],
+      "scale": [
+        0.71,
+        0.71,
+        0.71
+      ]
+    }
+  }
+}

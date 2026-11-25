@@ -1,0 +1,1289 @@
+{
+  "meta": {
+    "format_version": "4.10",
+    "model_format": "java_block",
+    "box_uv": false
+  },
+  "name": "复制工具",
+  "resolution": {
+    "width": 128,
+    "height": 128
+  },
+  "elements": [
+    {
+      "name": "书脊",
+      "type": "cube",
+      "to": [
+        8.55,
+        1.55,
+        13
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "af62d5b4-b2f4-51d1-8c15-0426ba561ba1",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            43,
+            51,
+            45,
+            54
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            84,
+            43,
+            94,
+            46
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            43,
+            51,
+            45,
+            54
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            84,
+            43,
+            94,
+            46
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            13,
+            20,
+            15,
+            30
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            13,
+            20,
+            15,
+            30
+          ]
+        }
+      },
+      "from": [
+        7.45,
+        -0.5,
+        3
+      ]
+    },
+    {
+      "name": "书脊扣",
+      "type": "cube",
+      "to": [
+        8.55,
+        0.5,
+        3.05
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "700e4065-c757-5f34-92d1-d18a1f9ad330",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            44,
+            75,
+            46,
+            76
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            44,
+            75,
+            46,
+            76
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            44,
+            75,
+            46,
+            76
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            44,
+            75,
+            46,
+            76
+          ]
+        }
+      },
+      "from": [
+        7.45,
+        -0.5,
+        2.5
+      ]
+    },
+    {
+      "name": "皮面 左页",
+      "type": "cube",
+      "to": [
+        8,
+        0.75,
+        13
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        -22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "3861ea11-feed-5ab7-b801-3ca9851a1c2b",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            65,
+            70,
+            72,
+            71
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            99,
+            64,
+            109,
+            65
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            65,
+            70,
+            72,
+            71
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            99,
+            64,
+            109,
+            65
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            104,
+            2,
+            111,
+            12
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            104,
+            2,
+            111,
+            12
+          ]
+        }
+      },
+      "from": [
+        1.2,
+        0.05,
+        3
+      ]
+    },
+    {
+      "name": "纸叠 左页",
+      "type": "cube",
+      "to": [
+        8,
+        1.5,
+        12.6
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        -22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "b6f1b0b7-ab95-5b3c-8abf-7e42a95f6a40",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            76,
+            70,
+            83,
+            71
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            113,
+            64,
+            123,
+            65
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            76,
+            70,
+            83,
+            71
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            113,
+            64,
+            123,
+            65
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            115,
+            2,
+            122,
+            12
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            2,
+            20,
+            9,
+            30
+          ]
+        }
+      },
+      "from": [
+        1.45,
+        0.65,
+        3.4
+      ]
+    },
+    {
+      "name": "护角 左页",
+      "type": "cube",
+      "to": [
+        2.2,
+        0.81,
+        13
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        -22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "dacec921-e708-581c-8676-91d677543784",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            44,
+            75,
+            46,
+            76
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            44,
+            75,
+            46,
+            76
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            44,
+            75,
+            46,
+            76
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            44,
+            75,
+            46,
+            76
+          ]
+        }
+      },
+      "from": [
+        1.2,
+        0.15,
+        12
+      ]
+    },
+    {
+      "name": "皮面 右页",
+      "type": "cube",
+      "to": [
+        14.8,
+        0.75,
+        13
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "90df7f6a-623b-5ea3-9bc8-fe89054c7162",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            65,
+            70,
+            72,
+            71
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            99,
+            64,
+            109,
+            65
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            65,
+            70,
+            72,
+            71
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            99,
+            64,
+            109,
+            65
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            104,
+            2,
+            111,
+            12
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            104,
+            2,
+            111,
+            12
+          ]
+        }
+      },
+      "from": [
+        8,
+        0.05,
+        3
+      ]
+    },
+    {
+      "name": "纸叠 右页",
+      "type": "cube",
+      "to": [
+        14.55,
+        1.5,
+        12.6
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "4edf0f49-aec1-5fb9-8637-acc776b24c5a",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            76,
+            70,
+            83,
+            71
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            113,
+            64,
+            123,
+            65
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            76,
+            70,
+            83,
+            71
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            113,
+            64,
+            123,
+            65
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            115,
+            2,
+            122,
+            12
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            2,
+            20,
+            9,
+            30
+          ]
+        }
+      },
+      "from": [
+        8,
+        0.65,
+        3.4
+      ]
+    },
+    {
+      "name": "护角 右页",
+      "type": "cube",
+      "to": [
+        14.8,
+        0.81,
+        4
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "980cbbc0-5874-5ff0-9fb0-f08e5cf02bad",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        }
+      },
+      "from": [
+        13.8,
+        0.15,
+        3
+      ]
+    },
+    {
+      "name": "书签 1",
+      "type": "cube",
+      "to": [
+        15.370000000000001,
+        1.2,
+        4.58
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "de5aca58-2747-5ce4-a9a7-1c5a485a90b1",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            19,
+            58,
+            23,
+            60
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            19,
+            58,
+            23,
+            60
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            19,
+            58,
+            23,
+            60
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            19,
+            58,
+            23,
+            60
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            74,
+            34,
+            80,
+            38
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            19,
+            58,
+            23,
+            60
+          ]
+        }
+      },
+      "from": [
+        14.15,
+        0.86,
+        3.92
+      ]
+    },
+    {
+      "name": "书签 2",
+      "type": "cube",
+      "to": [
+        15.870000000000001,
+        1.2,
+        5.82
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "6887bc6f-8279-5180-9ada-6d4bbc7c10c5",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            27,
+            58,
+            31,
+            60
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            27,
+            58,
+            31,
+            60
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            27,
+            58,
+            31,
+            60
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            27,
+            58,
+            31,
+            60
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            84,
+            34,
+            90,
+            38
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            27,
+            58,
+            31,
+            60
+          ]
+        }
+      },
+      "from": [
+        14.15,
+        0.86,
+        5.05
+      ]
+    },
+    {
+      "name": "书签 3",
+      "type": "cube",
+      "to": [
+        15.51,
+        1.2,
+        8.75
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "3e55d1dc-3af9-55d7-8476-72fcfaca0bdc",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            35,
+            58,
+            39,
+            60
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            35,
+            58,
+            39,
+            60
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            35,
+            58,
+            39,
+            60
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            35,
+            58,
+            39,
+            60
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            94,
+            34,
+            100,
+            38
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            35,
+            58,
+            39,
+            60
+          ]
+        }
+      },
+      "from": [
+        14.15,
+        0.86,
+        8.15
+      ]
+    },
+    {
+      "name": "书签 4",
+      "type": "cube",
+      "to": [
+        15.73,
+        1.2,
+        11.64
+      ],
+      "origin": [
+        8,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        22.5
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "80c4a4b0-0d09-5583-85e4-ee6323049e30",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            43,
+            58,
+            47,
+            60
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            43,
+            58,
+            47,
+            60
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            43,
+            58,
+            47,
+            60
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            43,
+            58,
+            47,
+            60
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            104,
+            34,
+            110,
+            38
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            43,
+            58,
+            47,
+            60
+          ]
+        }
+      },
+      "from": [
+        14.15,
+        0.86,
+        10.73
+      ]
+    }
+  ],
+  "outliner": [
+    {
+      "name": "书脊",
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "color": 0,
+      "export": true,
+      "locked": false,
+      "visibility": true,
+      "isOpen": true,
+      "uuid": "7cc316ef-72ea-581b-bb23-456f244220a0",
+      "children": [
+        "af62d5b4-b2f4-51d1-8c15-0426ba561ba1",
+        "700e4065-c757-5f34-92d1-d18a1f9ad330"
+      ]
+    },
+    {
+      "name": "左页",
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "color": 0,
+      "export": true,
+      "locked": false,
+      "visibility": true,
+      "isOpen": true,
+      "uuid": "bd478e21-a087-5a94-aa9d-16b2e27d953b",
+      "children": [
+        "3861ea11-feed-5ab7-b801-3ca9851a1c2b",
+        "b6f1b0b7-ab95-5b3c-8abf-7e42a95f6a40",
+        "dacec921-e708-581c-8676-91d677543784"
+      ]
+    },
+    {
+      "name": "右页",
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "color": 0,
+      "export": true,
+      "locked": false,
+      "visibility": true,
+      "isOpen": true,
+      "uuid": "1f850502-3d1e-5e85-b93f-79c8f1baad63",
+      "children": [
+        "90df7f6a-623b-5ea3-9bc8-fe89054c7162",
+        "4edf0f49-aec1-5fb9-8637-acc776b24c5a",
+        "980cbbc0-5874-5ff0-9fb0-f08e5cf02bad"
+      ]
+    },
+    {
+      "name": "书签",
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "color": 0,
+      "export": true,
+      "locked": false,
+      "visibility": true,
+      "isOpen": true,
+      "uuid": "dc654147-4147-59d7-947c-5a66632bf86c",
+      "children": [
+        "de5aca58-2747-5ce4-a9a7-1c5a485a90b1",
+        "6887bc6f-8279-5180-9ada-6d4bbc7c10c5",
+        "3e55d1dc-3af9-55d7-8476-72fcfaca0bdc",
+        "80c4a4b0-0d09-5583-85e4-ee6323049e30"
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "name": "tools.png",
+      "relative_path": "贴图/tools.png",
+      "folder": "block/bustling_models",
+      "namespace": "bustling",
+      "id": "0",
+      "particle": true,
+      "render_mode": "default",
+      "width": 128,
+      "height": 128,
+      "uv_width": 128,
+      "uv_height": 128,
+      "saved": false,
+      "mode": "bitmap",
+      "uuid": "fbc8e8e1-c141-510c-a799-7f883e8a08dc",
+      "source": "data:image/png;base64,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"
+    }
+  ],
+  "display": {
+    "gui": {
+      "rotation": [
+        52,
+        16,
+        1
+      ],
+      "translation": [
+        0,
+        3.6,
+        0
+      ],
+      "scale": [
+        0.88,
+        0.88,
+        0.88
+      ]
+    },
+    "ground": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        3,
+        0
+      ],
+      "scale": [
+        0.47,
+        0.47,
+        0.47
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.72,
+        0.72,
+        0.72
+      ]
+    },
+    "head": {
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "translation": [
+        0,
+        7,
+        0
+      ],
+      "scale": [
+        0.65,
+        0.65,
+        0.65
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        53,
+        12,
+        0
+      ],
+      "translation": [
+        -3.1364,
+        5.9925,
+        2.5301
+      ],
+      "scale": [
+        0.63,
+        0.63,
+        0.63
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        53,
+        12,
+        0
+      ],
+      "translation": [
+        -3.1364,
+        5.9925,
+        2.5301
+      ],
+      "scale": [
+        0.63,
+        0.63,
+        0.63
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        55,
+        23,
+        5
+      ],
+      "translation": [
+        -3.6675,
+        3.9187,
+        3.2679
+      ],
+      "scale": [
+        0.71,
+        0.71,
+        0.71
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        55,
+        23,
+        5
+      ],
+      "translation": [
+        -3.6675,
+        3.9187,
+        3.2679
+      ],
+      "scale": [
+        0.71,
+        0.71,
+        0.71
+      ]
+    }
+  }
+}

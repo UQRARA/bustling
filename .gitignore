@@ -1,0 +1,10 @@
+/build/
+/classes/
+/hook-builder/
+/deps/
+*.jar
+*.class
+__pycache__/
+.idea/
+.vscode/
+.gradle/

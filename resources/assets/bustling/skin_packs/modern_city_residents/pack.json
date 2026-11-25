@@ -1,0 +1,80 @@
+{
+  "name": "现代城市居民 · Modern City Residents",
+  "description": "通勤、街头与城市工作服，共十套服装和六张人物底皮。 Ten urban outfits and six natural base skins.",
+  "steve": {
+    "a": [
+      {
+        "texture": "black_sidecut.png",
+        "weight": 1
+      },
+      {
+        "texture": "gray_crop.png",
+        "weight": 1
+      },
+      {
+        "texture": "brown_sweep.png",
+        "weight": 1
+      }
+    ],
+    "b": [
+      {
+        "texture": "office_suit.png",
+        "weight": 1
+      },
+      {
+        "texture": "bus_uniform.png",
+        "weight": 1
+      },
+      {
+        "texture": "bike_shell.png",
+        "weight": 1
+      },
+      {
+        "texture": "work_coverall.png",
+        "weight": 1
+      },
+      {
+        "texture": "cafe_apron.png",
+        "weight": 1
+      },
+      {
+        "texture": "street_hoodie.png",
+        "weight": 1
+      }
+    ]
+  },
+  "alex": {
+    "a": [
+      {
+        "texture": "flax_tie.png",
+        "weight": 1
+      },
+      {
+        "texture": "red_flax_bob.png",
+        "weight": 1
+      },
+      {
+        "texture": "gold_crop.png",
+        "weight": 1
+      }
+    ],
+    "b": [
+      {
+        "texture": "trench_commute.png",
+        "weight": 1
+      },
+      {
+        "texture": "track_jacket.png",
+        "weight": 1
+      },
+      {
+        "texture": "delivery_shell.png",
+        "weight": 1
+      },
+      {
+        "texture": "campus_layers.png",
+        "weight": 1
+      }
+    ]
+  }
+}

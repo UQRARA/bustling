@@ -1,0 +1,5 @@
+{
+  "sources": [
+    {"type": "single", "resource": "minecraft:font/ascii_sga", "sprite": "bustling:enchantment_runes"}
+  ]
+}

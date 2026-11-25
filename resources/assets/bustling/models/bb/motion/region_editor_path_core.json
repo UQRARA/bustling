@@ -1,0 +1,119 @@
+{
+  "ambientocclusion": false,
+  "textures": {
+    "atlas": "bustling:block/bustling_models/tools",
+    "particle": "bustling:block/bustling_models/tools"
+  },
+  "render_type": "minecraft:solid",
+  "elements": [
+    {
+      "from": [
+        7,
+        17.5,
+        7
+      ],
+      "to": [
+        9,
+        19.5,
+        9
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            14.5,
+            7.25,
+            14.75,
+            7.5
+          ],
+          "neoforge_data": {
+            "block_light": 15,
+            "sky_light": 15,
+            "ambient_occlusion": false
+          }
+        },
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            14.5,
+            7.25,
+            14.75,
+            7.5
+          ],
+          "neoforge_data": {
+            "block_light": 15,
+            "sky_light": 15,
+            "ambient_occlusion": false
+          }
+        },
+        "south": {
+          "texture": "#atlas",
+          "uv": [
+            14.5,
+            7.25,
+            14.75,
+            7.5
+          ],
+          "neoforge_data": {
+            "block_light": 15,
+            "sky_light": 15,
+            "ambient_occlusion": false
+          }
+        },
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            14.5,
+            7.25,
+            14.75,
+            7.5
+          ],
+          "neoforge_data": {
+            "block_light": 15,
+            "sky_light": 15,
+            "ambient_occlusion": false
+          }
+        },
+        "up": {
+          "texture": "#atlas",
+          "uv": [
+            14.5,
+            7.25,
+            14.75,
+            7.5
+          ],
+          "neoforge_data": {
+            "block_light": 15,
+            "sky_light": 15,
+            "ambient_occlusion": false
+          }
+        },
+        "down": {
+          "texture": "#atlas",
+          "uv": [
+            14.5,
+            7.25,
+            14.75,
+            7.5
+          ],
+          "neoforge_data": {
+            "block_light": 15,
+            "sky_light": 15,
+            "ambient_occlusion": false
+          }
+        }
+      },
+      "shade": false,
+      "rotation": {
+        "origin": [
+          8,
+          18.5,
+          8
+        ],
+        "axis": "y",
+        "angle": 45,
+        "rescale": false
+      }
+    }
+  ]
+}

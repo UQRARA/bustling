@@ -1,0 +1,80 @@
+{
+  "name": "中世纪城市居民 · Medieval Townsfolk",
+  "description": "六种自然发色与十套细纹理城镇服装，按宽臂和窄臂组合。 Six natural hair colors and ten textured town outfits.",
+  "steve": {
+    "a": [
+      {
+        "texture": "black_crop.png",
+        "weight": 1
+      },
+      {
+        "texture": "gray_wave.png",
+        "weight": 1
+      },
+      {
+        "texture": "brown_part.png",
+        "weight": 1
+      }
+    ],
+    "b": [
+      {
+        "texture": "baker.png",
+        "weight": 1
+      },
+      {
+        "texture": "ferryman.png",
+        "weight": 1
+      },
+      {
+        "texture": "scribe.png",
+        "weight": 1
+      },
+      {
+        "texture": "coppersmith.png",
+        "weight": 1
+      },
+      {
+        "texture": "potter.png",
+        "weight": 1
+      },
+      {
+        "texture": "warden.png",
+        "weight": 1
+      }
+    ]
+  },
+  "alex": {
+    "a": [
+      {
+        "texture": "flax_braid.png",
+        "weight": 1
+      },
+      {
+        "texture": "red_flax.png",
+        "weight": 1
+      },
+      {
+        "texture": "pale_gold.png",
+        "weight": 1
+      }
+    ],
+    "b": [
+      {
+        "texture": "cloth_merchant.png",
+        "weight": 1
+      },
+      {
+        "texture": "herbalist.png",
+        "weight": 1
+      },
+      {
+        "texture": "courier.png",
+        "weight": 1
+      },
+      {
+        "texture": "bookbinder.png",
+        "weight": 1
+      }
+    ]
+  }
+}

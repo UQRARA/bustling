@@ -1,0 +1,9 @@
+{
+  "name": "运河市集 · Canal Market",
+  "description": "运河集市上的摊主、信使与船工。 / Traders, couriers and boatkeepers from the canal market.",
+  "skins": [
+    {"texture": "trader.png", "model": "wide", "weight": 5},
+    {"texture": "courier.png", "model": "slim", "weight": 3},
+    {"texture": "boatkeeper.png", "model": "wide", "weight": 2}
+  ]
+}

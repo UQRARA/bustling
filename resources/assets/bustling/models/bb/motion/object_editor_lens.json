@@ -1,0 +1,97 @@
+{
+  "ambientocclusion": false,
+  "textures": {
+    "atlas": "bustling:block/bustling_models/tools",
+    "particle": "bustling:block/bustling_models/tools"
+  },
+  "render_type": "minecraft:solid",
+  "elements": [
+    {
+      "from": [
+        6,
+        5.5,
+        1.5
+      ],
+      "to": [
+        10,
+        8.5,
+        1.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#atlas",
+          "uv": [
+            15.0,
+            5.375,
+            15.5,
+            5.75
+          ],
+          "neoforge_data": {
+            "block_light": 15,
+            "sky_light": 15,
+            "ambient_occlusion": false
+          }
+        }
+      },
+      "shade": false
+    },
+    {
+      "from": [
+        4.75,
+        6.15,
+        9
+      ],
+      "to": [
+        4.75,
+        8.9,
+        12
+      ],
+      "faces": {
+        "west": {
+          "texture": "#atlas",
+          "uv": [
+            3.75,
+            6.375,
+            4.125,
+            6.75
+          ],
+          "neoforge_data": {
+            "block_light": 15,
+            "sky_light": 15,
+            "ambient_occlusion": false
+          }
+        }
+      },
+      "shade": false
+    },
+    {
+      "from": [
+        11.25,
+        6.15,
+        9
+      ],
+      "to": [
+        11.25,
+        8.9,
+        12
+      ],
+      "faces": {
+        "east": {
+          "texture": "#atlas",
+          "uv": [
+            3.75,
+            6.375,
+            4.125,
+            6.75
+          ],
+          "neoforge_data": {
+            "block_light": 15,
+            "sky_light": 15,
+            "ambient_occlusion": false
+          }
+        }
+      },
+      "shade": false
+    }
+  ]
+}

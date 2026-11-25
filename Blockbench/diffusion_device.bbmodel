@@ -1,0 +1,2723 @@
+{
+  "meta": {
+    "format_version": "4.10",
+    "model_format": "java_block",
+    "box_uv": false
+  },
+  "name": "扩散装置",
+  "resolution": {
+    "width": 128,
+    "height": 128
+  },
+  "elements": [
+    {
+      "name": "承重底台",
+      "type": "cube",
+      "to": [
+        15,
+        0.75,
+        15
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "d1b52c98-75d2-5772-9e8c-14b11593205c",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            30,
+            64,
+            44,
+            65
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            30,
+            64,
+            44,
+            65
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            30,
+            64,
+            44,
+            65
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            30,
+            64,
+            44,
+            65
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            2,
+            2,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            2,
+            2,
+            16,
+            16
+          ]
+        }
+      },
+      "from": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "下机座",
+      "type": "cube",
+      "to": [
+        12,
+        6,
+        12
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "4afa057c-2395-5ac5-8bd9-11586cac9354",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            74,
+            20,
+            82,
+            26
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            74,
+            20,
+            82,
+            26
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            74,
+            20,
+            82,
+            26
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            74,
+            20,
+            82,
+            26
+          ]
+        }
+      },
+      "from": [
+        4,
+        0.75,
+        4
+      ]
+    },
+    {
+      "name": "承重过渡层",
+      "type": "cube",
+      "to": [
+        13,
+        8,
+        13
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "5c0541df-daac-509f-99f5-edad33ac7e6a",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            80,
+            51,
+            90,
+            53
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            80,
+            51,
+            90,
+            53
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            80,
+            51,
+            90,
+            53
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            80,
+            51,
+            90,
+            53
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            90,
+            2,
+            100,
+            12
+          ]
+        }
+      },
+      "from": [
+        3,
+        6,
+        3
+      ]
+    },
+    {
+      "name": "上机座",
+      "type": "cube",
+      "to": [
+        14,
+        10,
+        14
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "da4ad225-9e15-5168-b131-12c58fffb743",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            64,
+            51,
+            76,
+            53
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            64,
+            51,
+            76,
+            53
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            64,
+            51,
+            76,
+            53
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            64,
+            51,
+            76,
+            53
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            56,
+            2,
+            68,
+            14
+          ]
+        }
+      },
+      "from": [
+        2,
+        8,
+        2
+      ]
+    },
+    {
+      "name": "顶盖侧带",
+      "type": "cube",
+      "to": [
+        15,
+        13,
+        15
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "8c377703-21bb-5c92-9939-0a4f0dc819bd",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            66,
+            43,
+            80,
+            46
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            66,
+            43,
+            80,
+            46
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            66,
+            43,
+            80,
+            46
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            66,
+            43,
+            80,
+            46
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            20,
+            2,
+            34,
+            16
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            20,
+            2,
+            34,
+            16
+          ]
+        }
+      },
+      "from": [
+        1,
+        10,
+        1
+      ]
+    },
+    {
+      "name": "压铸上沿",
+      "type": "cube",
+      "to": [
+        15,
+        14,
+        15
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "869eea6e-80d8-5598-8651-fcfd5520ca84",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            66,
+            64,
+            80,
+            65
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            66,
+            64,
+            80,
+            65
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            66,
+            64,
+            80,
+            65
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            66,
+            64,
+            80,
+            65
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            38,
+            2,
+            52,
+            16
+          ]
+        }
+      },
+      "from": [
+        1,
+        13,
+        1
+      ]
+    },
+    {
+      "name": "晶盘底座",
+      "type": "cube",
+      "to": [
+        12,
+        14.5,
+        12
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "95bd995f-75b1-59dd-b2c5-03c87fac1ed8",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            42,
+            70,
+            50,
+            71
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            42,
+            70,
+            50,
+            71
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            42,
+            70,
+            50,
+            71
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            42,
+            70,
+            50,
+            71
+          ]
+        }
+      },
+      "from": [
+        4,
+        14,
+        4
+      ]
+    },
+    {
+      "name": "顶槽 晶盘",
+      "type": "cube",
+      "to": [
+        12,
+        14.5,
+        12
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "56504a81-1e4c-5d8e-a234-04bb054ca912",
+      "faces": {
+        "up": {
+          "texture": 1,
+          "uv": [
+            1,
+            1,
+            9,
+            9
+          ]
+        }
+      },
+      "from": [
+        4,
+        14.5,
+        4
+      ]
+    },
+    {
+      "name": "四角铜扣 (2, 2)",
+      "type": "cube",
+      "to": [
+        3,
+        14.5,
+        3
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "3fb6f719-a36a-5bf3-88ab-2ad35fb65c6c",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        }
+      },
+      "from": [
+        2,
+        14,
+        2
+      ]
+    },
+    {
+      "name": "四角铜扣 (2, 13)",
+      "type": "cube",
+      "to": [
+        3,
+        14.5,
+        14
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "919fef61-10c0-5ef3-b2df-37b93ab63e45",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        }
+      },
+      "from": [
+        2,
+        14,
+        13
+      ]
+    },
+    {
+      "name": "四角铜扣 (13, 2)",
+      "type": "cube",
+      "to": [
+        14,
+        14.5,
+        3
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "2886c852-2055-5d09-9de0-6bb23e7256f6",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        }
+      },
+      "from": [
+        13,
+        14,
+        2
+      ]
+    },
+    {
+      "name": "四角铜扣 (13, 13)",
+      "type": "cube",
+      "to": [
+        14,
+        14.5,
+        14
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "ffad580c-988c-5187-9e63-ecb9419155c0",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            56,
+            75,
+            57,
+            76
+          ]
+        }
+      },
+      "from": [
+        13,
+        14,
+        13
+      ]
+    },
+    {
+      "name": "出口壳 左 北",
+      "type": "cube",
+      "to": [
+        5.5,
+        5.75,
+        4.25
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "f833870c-a69a-530b-90a3-1f773f9dcf1b",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            59,
+            34,
+            60,
+            39
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            29,
+            34,
+            33,
+            39
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            59,
+            34,
+            60,
+            39
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            29,
+            34,
+            33,
+            39
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            61,
+            43,
+            62,
+            47
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            61,
+            43,
+            62,
+            47
+          ]
+        }
+      },
+      "from": [
+        4.5,
+        0.75,
+        1
+      ]
+    },
+    {
+      "name": "出口壳 右 北",
+      "type": "cube",
+      "to": [
+        11.5,
+        5.75,
+        4.25
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "a3291a80-92f4-589e-8f37-64da5657a6d4",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            59,
+            34,
+            60,
+            39
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            29,
+            34,
+            33,
+            39
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            59,
+            34,
+            60,
+            39
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            29,
+            34,
+            33,
+            39
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            61,
+            43,
+            62,
+            47
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            61,
+            43,
+            62,
+            47
+          ]
+        }
+      },
+      "from": [
+        10.5,
+        0.75,
+        1
+      ]
+    },
+    {
+      "name": "出口壳 顶 北",
+      "type": "cube",
+      "to": [
+        10.5,
+        5.75,
+        4.25
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "6397fe26-2b62-5e75-80b5-9e83cc575c82",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            116,
+            70,
+            121,
+            71
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            2,
+            75,
+            6,
+            76
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            116,
+            70,
+            121,
+            71
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            2,
+            75,
+            6,
+            76
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            114,
+            34,
+            119,
+            38
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            114,
+            34,
+            119,
+            38
+          ]
+        }
+      },
+      "from": [
+        5.5,
+        4.75,
+        1
+      ]
+    },
+    {
+      "name": "出口内衬 北",
+      "type": "cube",
+      "to": [
+        10.5,
+        4.75,
+        4.5
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "c5f585e2-0e3e-5dac-aeff-83ef1aa3272c",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            2,
+            43,
+            7,
+            47
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            43,
+            43,
+            46,
+            47
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            2,
+            43,
+            7,
+            47
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            43,
+            43,
+            46,
+            47
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            111,
+            43,
+            116,
+            46
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            111,
+            43,
+            116,
+            46
+          ]
+        }
+      },
+      "from": [
+        5.5,
+        0.75,
+        1.6
+      ]
+    },
+    {
+      "name": "内嵌紫板 北",
+      "type": "cube",
+      "to": [
+        10.5,
+        4.75,
+        1.59
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "d541c854-bace-5aa7-876c-a9a594836352",
+      "faces": {
+        "north": {
+          "texture": 1,
+          "uv": [
+            1,
+            11,
+            6,
+            15
+          ]
+        }
+      },
+      "from": [
+        5.5,
+        0.75,
+        1.58
+      ]
+    },
+    {
+      "name": "出口壳 左 东",
+      "type": "cube",
+      "to": [
+        15,
+        5.75,
+        5.5
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "ade543c1-0f12-58c9-832e-90b0378c0f85",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            29,
+            34,
+            33,
+            39
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            59,
+            34,
+            60,
+            39
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            29,
+            34,
+            33,
+            39
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            59,
+            34,
+            60,
+            39
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            10,
+            75,
+            14,
+            76
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            10,
+            75,
+            14,
+            76
+          ]
+        }
+      },
+      "from": [
+        11.75,
+        0.75,
+        4.5
+      ]
+    },
+    {
+      "name": "出口壳 右 东",
+      "type": "cube",
+      "to": [
+        15,
+        5.75,
+        11.5
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "c16f9f39-2bca-5dee-b1d8-d45ff3cef596",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            29,
+            34,
+            33,
+            39
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            59,
+            34,
+            60,
+            39
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            29,
+            34,
+            33,
+            39
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            59,
+            34,
+            60,
+            39
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            10,
+            75,
+            14,
+            76
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            10,
+            75,
+            14,
+            76
+          ]
+        }
+      },
+      "from": [
+        11.75,
+        0.75,
+        10.5
+      ]
+    },
+    {
+      "name": "出口壳 顶 东",
+      "type": "cube",
+      "to": [
+        15,
+        5.75,
+        10.5
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "dddd2522-db4b-5d75-a06d-17a05ecf0c9a",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            2,
+            75,
+            6,
+            76
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            116,
+            70,
+            121,
+            71
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            2,
+            75,
+            6,
+            76
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            116,
+            70,
+            121,
+            71
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            37,
+            34,
+            41,
+            39
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            37,
+            34,
+            41,
+            39
+          ]
+        }
+      },
+      "from": [
+        11.75,
+        4.75,
+        5.5
+      ]
+    },
+    {
+      "name": "出口内衬 东",
+      "type": "cube",
+      "to": [
+        14.4,
+        4.75,
+        10.5
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "58996aa8-4a5b-53a3-9571-f60394e4908d",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            43,
+            43,
+            46,
+            47
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            2,
+            43,
+            7,
+            47
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            43,
+            43,
+            46,
+            47
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            2,
+            43,
+            7,
+            47
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            52,
+            34,
+            55,
+            39
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            52,
+            34,
+            55,
+            39
+          ]
+        }
+      },
+      "from": [
+        11.5,
+        0.75,
+        5.5
+      ]
+    },
+    {
+      "name": "内嵌紫板 东",
+      "type": "cube",
+      "to": [
+        14.42,
+        4.75,
+        10.5
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "a43c4ef2-a6fc-52c9-a71a-63772ab1ee0c",
+      "faces": {
+        "east": {
+          "texture": 1,
+          "uv": [
+            1,
+            11,
+            6,
+            15
+          ]
+        }
+      },
+      "from": [
+        14.41,
+        0.75,
+        5.5
+      ]
+    },
+    {
+      "name": "出口壳 左 南",
+      "type": "cube",
+      "to": [
+        11.5,
+        5.75,
+        15
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "c505e163-5640-598f-8945-d8682a5db56b",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            59,
+            34,
+            60,
+            39
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            29,
+            34,
+            33,
+            39
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            59,
+            34,
+            60,
+            39
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            29,
+            34,
+            33,
+            39
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            61,
+            43,
+            62,
+            47
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            61,
+            43,
+            62,
+            47
+          ]
+        }
+      },
+      "from": [
+        10.5,
+        0.75,
+        11.75
+      ]
+    },
+    {
+      "name": "出口壳 右 南",
+      "type": "cube",
+      "to": [
+        5.5,
+        5.75,
+        15
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "5eed8413-601a-57ce-acc0-06e391ed2bf5",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            59,
+            34,
+            60,
+            39
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            29,
+            34,
+            33,
+            39
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            59,
+            34,
+            60,
+            39
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            29,
+            34,
+            33,
+            39
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            61,
+            43,
+            62,
+            47
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            61,
+            43,
+            62,
+            47
+          ]
+        }
+      },
+      "from": [
+        4.5,
+        0.75,
+        11.75
+      ]
+    },
+    {
+      "name": "出口壳 顶 南",
+      "type": "cube",
+      "to": [
+        10.5,
+        5.75,
+        15
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "cd5c09da-8e29-5e86-a392-3f60f12e7631",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            116,
+            70,
+            121,
+            71
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            2,
+            75,
+            6,
+            76
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            116,
+            70,
+            121,
+            71
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            2,
+            75,
+            6,
+            76
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            114,
+            34,
+            119,
+            38
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            114,
+            34,
+            119,
+            38
+          ]
+        }
+      },
+      "from": [
+        5.5,
+        4.75,
+        11.75
+      ]
+    },
+    {
+      "name": "出口内衬 南",
+      "type": "cube",
+      "to": [
+        10.5,
+        4.75,
+        14.4
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "9a79a560-58f8-5ffb-b6a0-00c713c5a87c",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            2,
+            43,
+            7,
+            47
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            43,
+            43,
+            46,
+            47
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            2,
+            43,
+            7,
+            47
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            43,
+            43,
+            46,
+            47
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            111,
+            43,
+            116,
+            46
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            111,
+            43,
+            116,
+            46
+          ]
+        }
+      },
+      "from": [
+        5.5,
+        0.75,
+        11.5
+      ]
+    },
+    {
+      "name": "内嵌紫板 南",
+      "type": "cube",
+      "to": [
+        10.5,
+        4.75,
+        14.42
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "bae7e1f3-b62b-58ed-ae24-129e1e85a8c4",
+      "faces": {
+        "south": {
+          "texture": 1,
+          "uv": [
+            1,
+            11,
+            6,
+            15
+          ]
+        }
+      },
+      "from": [
+        5.5,
+        0.75,
+        14.41
+      ]
+    },
+    {
+      "name": "出口壳 左 西",
+      "type": "cube",
+      "to": [
+        4.25,
+        5.75,
+        11.5
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "32b61579-388f-575b-b7e5-7fc7ed654b75",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            29,
+            34,
+            33,
+            39
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            59,
+            34,
+            60,
+            39
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            29,
+            34,
+            33,
+            39
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            59,
+            34,
+            60,
+            39
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            10,
+            75,
+            14,
+            76
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            10,
+            75,
+            14,
+            76
+          ]
+        }
+      },
+      "from": [
+        1,
+        0.75,
+        10.5
+      ]
+    },
+    {
+      "name": "出口壳 右 西",
+      "type": "cube",
+      "to": [
+        4.25,
+        5.75,
+        5.5
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "ef73f88b-4c19-567e-a948-3b4228ee49b0",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            29,
+            34,
+            33,
+            39
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            59,
+            34,
+            60,
+            39
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            29,
+            34,
+            33,
+            39
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            59,
+            34,
+            60,
+            39
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            10,
+            75,
+            14,
+            76
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            10,
+            75,
+            14,
+            76
+          ]
+        }
+      },
+      "from": [
+        1,
+        0.75,
+        4.5
+      ]
+    },
+    {
+      "name": "出口壳 顶 西",
+      "type": "cube",
+      "to": [
+        4.25,
+        5.75,
+        10.5
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "684edd45-1b2c-5975-9b68-d70e9c9f11b7",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            2,
+            75,
+            6,
+            76
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            116,
+            70,
+            121,
+            71
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            2,
+            75,
+            6,
+            76
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            116,
+            70,
+            121,
+            71
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            37,
+            34,
+            41,
+            39
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            37,
+            34,
+            41,
+            39
+          ]
+        }
+      },
+      "from": [
+        1,
+        4.75,
+        5.5
+      ]
+    },
+    {
+      "name": "出口内衬 西",
+      "type": "cube",
+      "to": [
+        4.5,
+        4.75,
+        10.5
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "8dc804a2-e8b5-5297-916c-460e06b81348",
+      "faces": {
+        "north": {
+          "texture": 0,
+          "uv": [
+            43,
+            43,
+            46,
+            47
+          ]
+        },
+        "east": {
+          "texture": 0,
+          "uv": [
+            2,
+            43,
+            7,
+            47
+          ]
+        },
+        "south": {
+          "texture": 0,
+          "uv": [
+            43,
+            43,
+            46,
+            47
+          ]
+        },
+        "west": {
+          "texture": 0,
+          "uv": [
+            2,
+            43,
+            7,
+            47
+          ]
+        },
+        "up": {
+          "texture": 0,
+          "uv": [
+            52,
+            34,
+            55,
+            39
+          ]
+        },
+        "down": {
+          "texture": 0,
+          "uv": [
+            52,
+            34,
+            55,
+            39
+          ]
+        }
+      },
+      "from": [
+        1.6,
+        0.75,
+        5.5
+      ]
+    },
+    {
+      "name": "内嵌紫板 西",
+      "type": "cube",
+      "to": [
+        1.59,
+        4.75,
+        10.5
+      ],
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "rescale": false,
+      "box_uv": false,
+      "autouv": 0,
+      "color": 0,
+      "uuid": "396947c3-38f8-5e86-be12-f0ab4d1f77d8",
+      "faces": {
+        "west": {
+          "texture": 1,
+          "uv": [
+            1,
+            11,
+            6,
+            15
+          ]
+        }
+      },
+      "from": [
+        1.58,
+        0.75,
+        5.5
+      ]
+    }
+  ],
+  "outliner": [
+    {
+      "name": "主体",
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "color": 0,
+      "export": true,
+      "locked": false,
+      "visibility": true,
+      "isOpen": true,
+      "uuid": "798f65aa-8629-504e-aa91-363063193c35",
+      "children": [
+        "d1b52c98-75d2-5772-9e8c-14b11593205c",
+        "4afa057c-2395-5ac5-8bd9-11586cac9354",
+        "5c0541df-daac-509f-99f5-edad33ac7e6a",
+        "da4ad225-9e15-5168-b131-12c58fffb743",
+        "8c377703-21bb-5c92-9939-0a4f0dc819bd",
+        "869eea6e-80d8-5598-8651-fcfd5520ca84",
+        "95bd995f-75b1-59dd-b2c5-03c87fac1ed8",
+        "56504a81-1e4c-5d8e-a234-04bb054ca912",
+        "3fb6f719-a36a-5bf3-88ab-2ad35fb65c6c",
+        "919fef61-10c0-5ef3-b2df-37b93ab63e45",
+        "2886c852-2055-5d09-9de0-6bb23e7256f6",
+        "ffad580c-988c-5187-9e63-ecb9419155c0"
+      ]
+    },
+    {
+      "name": "出口 北",
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "color": 0,
+      "export": true,
+      "locked": false,
+      "visibility": true,
+      "isOpen": true,
+      "uuid": "216a38fc-6ee2-59fc-b114-907974140320",
+      "children": [
+        "f833870c-a69a-530b-90a3-1f773f9dcf1b",
+        "a3291a80-92f4-589e-8f37-64da5657a6d4",
+        "6397fe26-2b62-5e75-80b5-9e83cc575c82",
+        "c5f585e2-0e3e-5dac-aeff-83ef1aa3272c",
+        "d541c854-bace-5aa7-876c-a9a594836352"
+      ]
+    },
+    {
+      "name": "出口 东",
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "color": 0,
+      "export": true,
+      "locked": false,
+      "visibility": true,
+      "isOpen": true,
+      "uuid": "19ca209f-0bcc-5036-8679-f0a2bbba47c6",
+      "children": [
+        "ade543c1-0f12-58c9-832e-90b0378c0f85",
+        "c16f9f39-2bca-5dee-b1d8-d45ff3cef596",
+        "dddd2522-db4b-5d75-a06d-17a05ecf0c9a",
+        "58996aa8-4a5b-53a3-9571-f60394e4908d",
+        "a43c4ef2-a6fc-52c9-a71a-63772ab1ee0c"
+      ]
+    },
+    {
+      "name": "出口 南",
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "color": 0,
+      "export": true,
+      "locked": false,
+      "visibility": true,
+      "isOpen": true,
+      "uuid": "419823e0-058a-5ea2-8e04-2295d6f83069",
+      "children": [
+        "c505e163-5640-598f-8945-d8682a5db56b",
+        "5eed8413-601a-57ce-acc0-06e391ed2bf5",
+        "cd5c09da-8e29-5e86-a392-3f60f12e7631",
+        "9a79a560-58f8-5ffb-b6a0-00c713c5a87c",
+        "bae7e1f3-b62b-58ed-ae24-129e1e85a8c4"
+      ]
+    },
+    {
+      "name": "出口 西",
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "color": 0,
+      "export": true,
+      "locked": false,
+      "visibility": true,
+      "isOpen": true,
+      "uuid": "836805b8-63c1-5123-a0be-9e3c2cf902e3",
+      "children": [
+        "32b61579-388f-575b-b7e5-7fc7ed654b75",
+        "ef73f88b-4c19-567e-a948-3b4228ee49b0",
+        "684edd45-1b2c-5975-9b68-d70e9c9f11b7",
+        "8dc804a2-e8b5-5297-916c-460e06b81348",
+        "396947c3-38f8-5e86-be12-f0ab4d1f77d8"
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "name": "tools.png",
+      "relative_path": "贴图/tools.png",
+      "folder": "block/bustling_models",
+      "namespace": "bustling",
+      "id": "0",
+      "particle": true,
+      "render_mode": "default",
+      "width": 128,
+      "height": 128,
+      "uv_width": 128,
+      "uv_height": 128,
+      "saved": false,
+      "mode": "bitmap",
+      "uuid": "fbc8e8e1-c141-510c-a799-7f883e8a08dc",
+      "source": "data:image/png;base64,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"
+    },
+    {
+      "name": "diffusion_pulse.png",
+      "folder": "block/bustling_models",
+      "namespace": "bustling",
+      "id": "1",
+      "particle": false,
+      "render_mode": "default",
+      "width": 16,
+      "height": 16,
+      "uv_width": 16,
+      "uv_height": 16,
+      "saved": false,
+      "mode": "bitmap",
+      "uuid": "f194f6d3-261b-5d37-b686-4b5d9731fb49",
+      "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABE0lEQVR42sWSsUrDUBSGv9ycSFKQUIwVXRXFQRCfwUHoCwiCOvgwPkZBhL5AwaGzLuJuseCkECKhiynm5l6HmqDY4BCK//pz/nPOd46zt3ZhAbTJmUwTDjePARiO+4R+hCgPgMzeMU+KhlLa5FX3wmpECaKEwmom04TSr5Ozsdy1AIXVdLfPaQcdANIsZjDq4ToCQCt4nh9wun9lAUQJ7aDDSmsdgLf3V9IsRhsNwO3L5WIYyHDc5/sKpX6vUAMx9CNCP8J1hMGoR5rFP4pLv/YKojxEeVWINhptdFVc+rUBTRk4u6tnFsBVgqeWyM0HxRf53Ln/+5EaX8FVM8pHWyfsRAc8Jg/cPF3PJrAsfoL/Z/AJkIl09eP+TI8AAAAASUVORK5CYII=",
+      "relative_path": "贴图/diffusion_pulse_preview.png"
+    }
+  ],
+  "display": {
+    "gui": {
+      "rotation": [
+        30,
+        225,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.625,
+        0.625,
+        0.625
+      ]
+    },
+    "ground": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        3,
+        0
+      ],
+      "scale": [
+        0.47,
+        0.47,
+        0.47
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.72,
+        0.72,
+        0.72
+      ]
+    },
+    "head": {
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "translation": [
+        0,
+        7,
+        0
+      ],
+      "scale": [
+        0.65,
+        0.65,
+        0.65
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        10,
+        -35,
+        0
+      ],
+      "translation": [
+        -0.8,
+        2.8409,
+        0.2188
+      ],
+      "scale": [
+        0.42,
+        0.42,
+        0.42
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        10,
+        -35,
+        0
+      ],
+      "translation": [
+        -0.8,
+        2.8409,
+        0.2188
+      ],
+      "scale": [
+        0.42,
+        0.42,
+        0.42
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        65,
+        45,
+        0
+      ],
+      "translation": [
+        -0.0,
+        0.5705,
+        1.2235
+      ],
+      "scale": [
+        0.45,
+        0.45,
+        0.45
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        65,
+        45,
+        0
+      ],
+      "translation": [
+        0.0,
+        0.5705,
+        1.2235
+      ],
+      "scale": [
+        0.45,
+        0.45,
+        0.45
+      ]
+    }
+  }
+}

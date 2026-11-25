@@ -1,0 +1,23 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "dev.bustling.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "plugin": "dev.bustling.BustlingMixinPlugin",
+  "client": [
+    "IrisShadowRendererMixin",
+    "CustomNpcOverlayMixin",
+    "ToolItemModelMixin",
+    "DeviceModelMixin",
+    "ClientDevicePlacementMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  },
+  "mixins": [
+    "DevicePlacementMixin",
+    "DeviceLifecycleMixin",
+    "DeviceSpawnerMixin",
+    "DeviceRedstoneMixin"
+  ]
+}

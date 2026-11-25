@@ -1,0 +1,138 @@
+{
+  "atlas": {
+    "source": "Blockbench/贴图/tools.png",
+    "runtime_path": "assets/bustling/textures/block/bustling_models/tools.png",
+    "width": 128,
+    "height": 128,
+    "runtime_uv_units": 16
+  },
+  "models": {
+    "region_editor_area": {
+      "name_zh": "区域编辑器",
+      "state_zh": "区域模式 · 蓝色核心",
+      "registry_id": "bustling:region_editor",
+      "project": "Blockbench/region_editor_area.bbmodel",
+      "model_resource": "bustling:bb/region_editor_area",
+      "runtime_path": "assets/bustling/models/bb/region_editor_area.json",
+      "textures": {
+        "atlas": "bustling:block/bustling_models/tools",
+        "particle": "bustling:block/bustling_models/tools"
+      },
+      "render_type": null,
+      "translucent_name_prefix": "晶壳 "
+    },
+    "region_editor_path": {
+      "name_zh": "区域编辑器",
+      "state_zh": "路径模式 · 黄色核心",
+      "registry_id": "bustling:region_editor",
+      "project": "Blockbench/region_editor_path.bbmodel",
+      "model_resource": "bustling:bb/region_editor_path",
+      "runtime_path": "assets/bustling/models/bb/region_editor_path.json",
+      "textures": {
+        "atlas": "bustling:block/bustling_models/tools",
+        "particle": "bustling:block/bustling_models/tools"
+      },
+      "render_type": null,
+      "translucent_name_prefix": "晶壳 "
+    },
+    "region_editor_delete": {
+      "name_zh": "区域编辑器",
+      "state_zh": "删除模式 · 红色核心",
+      "registry_id": "bustling:region_editor",
+      "project": "Blockbench/region_editor_delete.bbmodel",
+      "model_resource": "bustling:bb/region_editor_delete",
+      "runtime_path": "assets/bustling/models/bb/region_editor_delete.json",
+      "textures": {
+        "atlas": "bustling:block/bustling_models/tools",
+        "particle": "bustling:block/bustling_models/tools"
+      },
+      "render_type": null,
+      "translucent_name_prefix": "晶壳 "
+    },
+    "object_editor": {
+      "name_zh": "对象编辑器",
+      "state_zh": "手持扫描仪",
+      "registry_id": "bustling:object_editor",
+      "project": "Blockbench/object_editor.bbmodel",
+      "model_resource": "bustling:bb/object_editor",
+      "runtime_path": "assets/bustling/models/bb/object_editor.json",
+      "textures": {
+        "atlas": "bustling:block/bustling_models/tools",
+        "particle": "bustling:block/bustling_models/tools"
+      },
+      "render_type": null
+    },
+    "copy_tool": {
+      "name_zh": "复制工具",
+      "state_zh": "剪贴板为空 · 空白书页",
+      "registry_id": "bustling:copy_tool",
+      "project": "Blockbench/copy_tool.bbmodel",
+      "model_resource": "bustling:bb/copy_tool",
+      "runtime_path": "assets/bustling/models/bb/copy_tool.json",
+      "textures": {
+        "atlas": "bustling:block/bustling_models/tools",
+        "particle": "bustling:block/bustling_models/tools"
+      },
+      "render_type": null
+    },
+    "copy_tool_loaded": {
+      "name_zh": "复制工具",
+      "state_zh": "剪贴板有内容 · 原版附魔符文",
+      "registry_id": "bustling:copy_tool",
+      "project": "Blockbench/copy_tool_loaded.bbmodel",
+      "model_resource": "bustling:bb/copy_tool_loaded",
+      "runtime_path": "assets/bustling/models/bb/copy_tool_loaded.json",
+      "textures": {
+        "atlas": "bustling:block/bustling_models/tools",
+        "particle": "bustling:block/bustling_models/tools",
+        "runes": "bustling:enchantment_runes"
+      },
+      "render_type": "minecraft:cutout",
+      "emissive_name_prefix": "附魔符文 ",
+      "emissive_native_font": "ascii_sga.png",
+      "emissive_color": "ff965cf0"
+    },
+    "client_settings": {
+      "name_zh": "客户端设置",
+      "state_zh": "河流地形平板",
+      "registry_id": "bustling:client_settings",
+      "project": "Blockbench/client_settings.bbmodel",
+      "model_resource": "bustling:bb/client_settings",
+      "runtime_path": "assets/bustling/models/bb/client_settings.json",
+      "textures": {
+        "atlas": "bustling:block/bustling_models/tools",
+        "particle": "bustling:block/bustling_models/tools"
+      },
+      "render_type": null
+    },
+    "diffusion_device": {
+      "name_zh": "扩散装置",
+      "state_zh": "方块与物品共享模型",
+      "registry_id": "bustling:diffusion_device",
+      "project": "Blockbench/diffusion_device.bbmodel",
+      "model_resource": "bustling:bb/diffusion_device",
+      "runtime_path": "assets/bustling/models/bb/diffusion_device.json",
+      "textures": {
+        "atlas": "bustling:block/bustling_models/tools",
+        "particle": "bustling:block/bustling_models/diffuser_particle",
+        "pulse": "bustling:block/bustling_models/diffusion_pulse"
+      },
+      "render_type": null,
+      "pulse_texture": {
+        "name": "diffusion_pulse.png",
+        "source": "Blockbench/贴图/diffusion_pulse.png",
+        "runtime_path": "assets/bustling/textures/block/bustling_models/diffusion_pulse.png",
+        "frame_size": [
+          16,
+          16
+        ],
+        "frames": 30,
+        "element_prefixes": [
+          "内嵌紫板",
+          "紫色正方形",
+          "顶槽 "
+        ]
+      }
+    }
+  }
+}

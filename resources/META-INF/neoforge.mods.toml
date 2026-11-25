@@ -1,0 +1,29 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "MIT"
+
+[[mods]]
+displayTest = "IGNORE_ALL_VERSION"
+modId = "bustling"
+version = "${mod_version}"
+logoFile = "assets/bustling/icon.png"
+logoBlur = true
+displayName = "Bustling"
+description = '''Create crowds that follow paths, fill areas, or spread from diffusion devices.'''
+
+[[dependencies.bustling]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1,21.2)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.bustling]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,1.21.2)"
+ordering = "NONE"
+side = "BOTH"
+
+[[mixins]]
+config = "bustling.iris.mixins.json"
