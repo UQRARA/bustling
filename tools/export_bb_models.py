@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Export the eight editable Blockbench projects to the bbfix.9 resource overlay."""
+"""Export the eight editable Blockbench projects to the NeoForge resource overlay."""
 from argparse import ArgumentParser
 from base64 import b64decode, b64encode
 from math import isfinite

@@ -5,7 +5,7 @@ Bustling adds decorative crowds to Minecraft. Use paths, polygonal areas, or red
 - **Crowd layouts.** Draw open paths and closed loops, scatter crowds inside polygonal areas, or place a Diffusion Device with a configurable radius, population limit, and drop-off in density toward the edge.
 - **Crowd appearance.** Choose plain white models or configure a weighted mix of entities and skins in the Object Editor. The included skin packs are **Medieval Townsfolk** and **Modern City Residents**. You can also add your own.
 - **Reusable settings.** Use the Copy Tool to transfer shared settings between paths, areas, and Diffusion Devices. These include crowd density, step height, ground filters, and model selections with their weights.
-- **Local crowd controls.** Set a population cap, standing share, active simulation radius, and CPU budget. Optional footsteps use the sound of the block underfoot. Time of day and weather can gradually change the target population. Crowd members are added or removed outside the camera’s view as the target changes.
+- **Local crowd controls.** Set a population cap, standing share, active simulation radius, and CPU budget. Optional footsteps use the sound of the block underfoot. Time of day and weather can gradually change the target population. Population changes from weather and time happen out of view. Layout edits update the preview immediately.
 
 ## Getting started
 
@@ -16,6 +16,8 @@ Bustling adds decorative crowds to Minecraft. Use paths, polygonal areas, or red
 
 ## Compatibility
 
-Requires **Minecraft Java Edition 1.21.1** and **NeoForge 21.1.x**. In multiplayer, the server stores and synchronizes crowd layouts and Diffusion Device settings. Each client simulates and renders its own crowds.
+Requires **Minecraft Java Edition 1.21.1** and **NeoForge 21.1.x**. In multiplayer, the server stores and synchronizes crowd layouts and Diffusion Device settings. Each client simulates and renders its own crowds. Multiplayer editors need the same release on both client and server.
 
 **Optional integration.** With **Yes Steve Model 2.6.5** installed, available YSM models can be selected from the skin pack picker in the Object Editor.
+
+[Download the current release](https://github.com/UQRARA/bustling/releases/tag/v0.1.0-beta.19)

@@ -1,7 +1,10 @@
 package dev.bustling;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.tags.FluidTags;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.ClipContext;
+import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.client.event.RenderFrameEvent;
 import net.neoforged.neoforge.client.event.RenderLevelStageEvent;
@@ -27,10 +30,11 @@ public final class ToolAim {
         if (preview == null) {
             Player player = mc.player;
             String dimension = mc.level.dimension().location().toString();
-            Vec3 hit = ClientOnly.raycast(player, REACH);
+            Vec3 solid = ClientOnly.raycast(player, REACH);
             CrowdData.Emitter diffuser = DiffuserClient.target(dimension, player.getEyePosition(),
-                    player.getViewVector(1), hit);
+                    player.getViewVector(1), solid);
             boolean deleting = selectionMode() == ToolConfig.Mode.DELETE;
+            Vec3 hit = deleting && diffuser != null ? solid : layoutRay(player, REACH);
             CrowdData.Emitter shape = diffuser == null ? shapeAt(dimension, hit, deleting) : null;
             preview = new Preview(hit, diffuser, shape);
         }
@@ -57,7 +61,36 @@ public final class ToolAim {
     public static Vec3 previewRay(Player player, double reach) {
         Minecraft mc = Minecraft.getInstance();
         if (player == mc.player && reach == REACH && isDrawing(mc)) return current(mc).hit();
-        return ClientOnly.raycast(player, reach);
+        return layoutRay(player, reach);
+    }
+
+    public static Vec3 placementRay(Player player, double reach) {
+        Minecraft mc = Minecraft.getInstance();
+        if (player == null || mc.level == null) return null;
+        if (ToolConfig.mode == ToolConfig.Mode.DELETE) {
+            Vec3 solid = ClientOnly.raycast(player, reach);
+            if (solid != null && DiffuserClient.target(mc.level.dimension().location().toString(),
+                    player.getEyePosition(), player.getViewVector(1), solid) != null) return solid;
+        }
+        return layoutRay(player, reach);
+    }
+
+    public static Vec3 layoutRay(Player player, double reach) {
+        var level = Minecraft.getInstance().level;
+        if (player == null || level == null) return null;
+        Vec3 eye = player.getEyePosition();
+        Vec3 end = eye.add(player.getViewVector(1).scale(reach));
+        var hit = level.clip(new ClipContext(eye, end, ClipContext.Block.OUTLINE, ClipContext.Fluid.WATER, player));
+        if (hit.getType() != HitResult.Type.BLOCK) return null;
+
+        var pos = hit.getBlockPos();
+        double x = pos.getX() + .5, z = pos.getZ() + .5;
+        double y = hit.getLocation().y;
+        if (level.getFluidState(pos).is(FluidTags.WATER)) {
+            double surface = CrowdWater.surface(level, x, pos.getY(), z);
+            if (Double.isFinite(surface)) y = Math.max(y, surface);
+        }
+        return new Vec3(x, y, z);
     }
 
     public static CrowdData.Emitter highlightShape(double[] point) {

@@ -14,17 +14,25 @@ public final class BustlingNet {
     }
 
     public static void sendTo(ServerPlayer player) {
-        if (canSend(player)) PacketDistributor.sendToPlayer(player, new SyncPayload(ServerCrowdStore.toJson()));
+        if (canSend(player)) PacketDistributor.sendToPlayer(player, new SyncPayload(ServerCrowdStore.networkJson(0)));
         SkinPackNetwork.sendTo(player);
     }
 
+    static void acknowledge(ServerPlayer player, long sequence, boolean accepted) {
+        if (canSend(player)) PacketDistributor.sendToPlayer(player, new SyncPayload(ServerCrowdStore.networkJson(sequence, accepted)));
+    }
+
     public static void broadcast() {
+        broadcastExcept(null);
+    }
+
+    static void broadcastExcept(ServerPlayer excluded) {
         MinecraftServer server = ServerLifecycleHooks.getCurrentServer();
         if (server == null) return;
         SyncPayload packet = null;
         for (ServerPlayer player : server.getPlayerList().getPlayers()) {
-            if (!canSend(player)) continue;
-            if (packet == null) packet = new SyncPayload(ServerCrowdStore.toJson());
+            if (player == excluded || !canSend(player)) continue;
+            if (packet == null) packet = new SyncPayload(ServerCrowdStore.networkJson(0));
             PacketDistributor.sendToPlayer(player, packet);
         }
     }
@@ -42,7 +50,7 @@ public final class BustlingNet {
                 }
                 for (DiffuserPowerPayload packet : packets) PacketDistributor.sendToPlayer(player, packet);
             } else {
-                if (fallback == null) fallback = new SyncPayload(ServerCrowdStore.toJson());
+                if (fallback == null) fallback = new SyncPayload(ServerCrowdStore.networkJson(0));
                 PacketDistributor.sendToPlayer(player, fallback);
             }
         }

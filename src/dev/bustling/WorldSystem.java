@@ -27,8 +27,10 @@ public final class WorldSystem {
     public static boolean shadows = false;
     public static boolean activeEnabled = true;
     public static boolean environmentEnabled = true;
-    public static boolean avoidBlocks = true, avoidPlayers = true;
-    public static int playerRadius = 6;
+    private static final boolean DEFAULT_AVOIDANCE = true;
+    private static final int DEFAULT_PLAYER_RADIUS = 6;
+    public static boolean avoidBlocks = DEFAULT_AVOIDANCE, avoidPlayers = DEFAULT_AVOIDANCE;
+    public static int playerRadius = DEFAULT_PLAYER_RADIUS;
     public static int maxTotal = 512;
     public static int activeRadius = 12;
     public static int navigationBudget = 1;
@@ -151,6 +153,8 @@ public final class WorldSystem {
         shadows = false;
         activeEnabled = true;
         environmentEnabled = true;
+        avoidBlocks = avoidPlayers = DEFAULT_AVOIDANCE;
+        playerRadius = DEFAULT_PLAYER_RADIUS;
         maxTotal = 512;
         activeRadius = 12;
         navigationBudget = 1;
@@ -205,10 +209,17 @@ public final class WorldSystem {
     }
 
     public static void invalidate() {
+        allocationRevision++;
         allocationTick = Long.MIN_VALUE;
         allocationWorld = null;
         GROUPS.clear();
         ALLOCATION.clear();
+    }
+
+    private static long allocationRevision;
+
+    static long allocationRevision() {
+        return allocationRevision;
     }
 
     public static void resetEnvironment() {

@@ -1,9 +1,10 @@
 package dev.bustling;
 
-import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.google.gson.Gson;
 import java.nio.file.Files;
+import java.util.List;
 import java.util.Map;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
@@ -69,12 +70,11 @@ public final class DevicePowerRegression {
     }
 
     private static void sendEdit(JsonObject device, ServerPlayer sender) {
-        var packet = new JsonObject();
-        packet.add("emitters", new JsonArray());
-        var edits = new JsonArray();
-        edits.add(device);
-        packet.add("diffuserEdits", edits);
-        ServerCrowdStore.handleClientEdit(packet.toString(), sender);
+        var before = device();
+        before.remove("enabled");
+        device.remove("enabled");
+        var change = new CrowdEdits.Change(new CrowdEdits.Key("minecraft:overworld", ID), before, device);
+        ServerCrowdStore.handleClientEdit(new Gson().toJson(new CrowdEdits.Request(1, List.of(change))), sender);
     }
 
     private static JsonObject device() {

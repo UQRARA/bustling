@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Map;
 import com.google.gson.*;
 import dev.bustling.*;
 import net.minecraft.client.Minecraft;
@@ -111,7 +112,9 @@ public final class ToolAndDeviceRegression {
         check(player.level.writes == 1 && BustlingNet.syncs == 1, "single lifecycle write and sync");
         check(!ServerCrowdStore.toJson().contains(DEVICE) && ServerCrowdStore.toJson().contains("the_nether"),
               "only the authorized block metadata was removed");
-        ServerCrowdStore.handleClientEdit("{\"emitters\":[{\"id\":\"region-qa\",\"type\":\"region\"}]}", player);
+        var region = new CrowdData.Emitter("region-qa", "region");
+        var change = Map.of("key", Map.of("dimension", DIM, "id", region.id), "after", region);
+        ServerCrowdStore.handleClientEdit(new Gson().toJson(Map.of("sequence", 1, "changes", List.of(change))), player);
         check(BustlingNet.syncs == 2 && ServerCrowdStore.toJson().contains("region-qa")
                 && ServerCrowdStore.toJson().contains("the_nether"), "ordinary saves preserve diffuser metadata");
     }

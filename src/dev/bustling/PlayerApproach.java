@@ -2,7 +2,8 @@ package dev.bustling;
 
 /** Horizontal movement constraints for a crowd that faces and approaches a player. */
 final class PlayerApproach {
-    private static final double HOLD_DISTANCE = 2.0;
+    static final double HOLD_DISTANCE = 2.0;
+    static final double RETREAT_DISTANCE = 2.20;
 
     private PlayerApproach() {}
 

@@ -18,6 +18,7 @@ import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.player.RemotePlayer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.player.Player;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.client.event.RenderNameTagEvent;
@@ -53,6 +54,8 @@ public final class YsmClientModels {
     }
 
     private static final class CrowdPlayer extends RemotePlayer {
+        boolean floating;
+
         CrowdPlayer(ClientLevel level) {
             super(level, new GameProfile(UUID.randomUUID(), "Bustling"));
             setOnGround(true);
@@ -60,6 +63,10 @@ public final class YsmClientModels {
 
         @Override public Component getDisplayName() {
             return Component.empty();
+        }
+
+        @Override public boolean isInWater() {
+            return floating;
         }
 
         @Override public void tick() {
@@ -228,11 +235,25 @@ public final class YsmClientModels {
     }
 
     public static void animate(Entity entity, CrowdData.Emitter emitter, CrowdSampler.Ghost ghost) {
+        boolean inWater = CrowdWater.floating(ghost.move());
+        float swim = CrowdWater.swimBlend(ghost.move());
+        boolean swimming = swim > .1f;
         if (entity instanceof CrowdPlayer player) {
-            boolean grounded = CrowdNavigation.grounded(emitter, ghost.idx());
+            player.floating = inWater;
+            boolean grounded = !inWater && CrowdNavigation.grounded(emitter, ghost.idx());
             if (player.onGround() != grounded) player.setOnGround(grounded);
+            Pose pose = swimming ? Pose.SWIMMING : Pose.STANDING;
+            if (player.getPose() != pose) player.setPose(pose);
+        }
+        if (inWater) {
+            // The underlying entity clock reads positive intensity to advance locomotion.
+            ghost = new CrowdSampler.Ghost(ghost.x(), ghost.y(), ghost.z(), ghost.yaw(), ghost.alpha(),
+                    ghost.size(), ghost.color(), ghost.idx(), ghost.gait(), swim);
         }
         MobMotion.animate(entity, emitter, ghost);
+        if (entity.isSwimming() != swimming) entity.setSwimming(swimming);
+        boolean sprinting = !inWater && CrowdPace.runBlend(ghost.move()) > .25f;
+        if (entity.isSprinting() != sprinting) entity.setSprinting(sprinting);
     }
 
     static void hideNameTag(RenderNameTagEvent event) {

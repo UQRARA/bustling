@@ -1,8 +1,6 @@
 package dev.bustling;
 
 import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,12 +43,10 @@ public final class CopySettingsRegression {
         check(device.count == 32, "actual population uses the target's radius and cap");
 
         var gson = new Gson();
-        var packet = new JsonObject();
-        packet.add("emitters", new JsonArray());
-        var edits = new JsonArray();
-        edits.add(gson.toJsonTree(device));
-        packet.add("diffuserEdits", edits);
-        ServerCrowdStore.handleClientEdit(packet.toString(), new net.minecraft.server.level.ServerPlayer());
+        var previous = gson.fromJson(ServerCrowdStore.toJson(), CrowdData.Root.class).emitters.getFirst();
+        var change = new CrowdEdits.Change(CrowdEdits.key(device), CrowdEdits.value(previous), CrowdEdits.value(device));
+        ServerCrowdStore.handleClientEdit(gson.toJson(new CrowdEdits.Request(1, List.of(change))),
+                new net.minecraft.server.level.ServerPlayer());
         var saved = gson.fromJson(ServerCrowdStore.toJson(), CrowdData.Root.class).emitters.getFirst();
         checkShared(saved);
         check(DiffuserData.valid(saved) && saved.diffuserRadius == 11 && saved.diffuserDecay == 2,

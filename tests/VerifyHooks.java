@@ -44,7 +44,7 @@ public class VerifyHooks {
                 }
             }
         }
-        System.out.printf("PASS ASM verification for %d loose classes / %d methods and both bbfix.9 integration hooks%n",
+        System.out.printf("PASS ASM verification for %d loose classes / %d methods and both renderer integration hooks%n",
                           classes, methods);
     }
 }

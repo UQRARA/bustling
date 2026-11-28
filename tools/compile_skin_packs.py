@@ -1,8 +1,10 @@
-"""Compile the beta.5 overlay against the beta.4 release and its NeoForge client libraries."""
+"""Compile a clean overlay against the beta.4 release and NeoForge client libraries."""
 import os
 from pathlib import Path
+import shutil
 import subprocess
 import sys
+from tempfile import TemporaryDirectory
 
 root = Path(__file__).resolve().parents[1]
 base, libs, tools = map(Path, sys.argv[1:4])
@@ -15,10 +17,15 @@ if not game or not patched:
 join = lambda entries: os.pathsep.join(map(str, entries))
 ecj = ["java", "-jar", str(tools / "ecj.jar"), "-21", "-proc:none", "-nowarn"]
 asm = [tools / "asm.jar", tools / "asm-tree.jar"]
-hook_dir = root / "hook-builder"
-subprocess.run([*ecj, "-cp", join(asm), "-d", str(hook_dir),
-                str(root / "tools/PatchSkinPacks.java")], check=True)
-subprocess.run(["java", "-cp", join([hook_dir, *asm]), "PatchSkinPacks",
-                str(base), str(loose)], check=True)
-subprocess.run([*ecj, "-cp", join([loose, *patched, *game, base, *runtime]), "-d", str(loose),
-                *map(str, sorted((root / "src").rglob("*.java")))], check=True)
+with TemporaryDirectory(prefix="bustling-build-", dir=root) as temporary:
+    staged = Path(temporary) / "classes"
+    hook_dir = Path(temporary) / "hook-builder"
+    subprocess.run([*ecj, "-cp", join(asm), "-d", str(hook_dir),
+                    str(root / "tools/PatchSkinPacks.java")], check=True)
+    subprocess.run(["java", "-cp", join([hook_dir, *asm]), "PatchSkinPacks",
+                    str(base), str(staged)], check=True)
+    subprocess.run([*ecj, "-cp", join([staged, *patched, *game, base, *runtime]), "-d", str(staged),
+                    *map(str, sorted((root / "src").rglob("*.java")))], check=True)
+    if loose.exists():
+        shutil.rmtree(loose)
+    staged.rename(loose)

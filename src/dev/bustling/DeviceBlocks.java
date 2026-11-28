@@ -24,6 +24,7 @@ public final class DeviceBlocks {
         if (!(context.getLevel() instanceof ServerLevel level) || !ToolItems.isDevice(context.getItemInHand())) {
             return CommonHooks.onPlaceItemIntoWorld(context);
         }
+        if (!ServerCrowdStore.writable()) return InteractionResult.FAIL;
         BlockPos pos = new BlockPlaceContext(context).getClickedPos();
         InteractionResult result = CommonHooks.onPlaceItemIntoWorld(context);
         if (result.consumesAction() && level.getBlockEntity(pos) instanceof SpawnerBlockEntity spawner) {

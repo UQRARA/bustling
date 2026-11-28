@@ -29,6 +29,7 @@ public final class WorldClient {
         NeoForge.EVENT_BUS.addListener(WandLaser::draw);
         NeoForge.EVENT_BUS.addListener(PasteEffects::draw);
         NeoForge.EVENT_BUS.addListener(ToolParticles::tick);
+        NeoForge.EVENT_BUS.addListener(CrowdNavigation::tick);
         NeoForge.EVENT_BUS.addListener(YsmClientModels::tick);
         NeoForge.EVENT_BUS.addListener(EventPriority.LOWEST, YsmClientModels::hideNameTag);
         NeoForge.EVENT_BUS.addListener(ToolMotion::advance);

@@ -208,11 +208,22 @@ public class ServerPlayer extends Player {
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
 public record MinecraftServer(ServerLevel level) {
+    public java.nio.file.Path getWorldPath(net.minecraft.world.level.storage.LevelResource resource) {
+        return java.nio.file.Path.of(System.getProperty("bustling.qa.world", System.getProperty("bustling.qa.config")));
+    }
     public ServerLevel getLevel(ResourceKey<?> key) {
         return key.location().toString().equals(level.dimensionId) ? level : null;
     }
 }
 ''',
+'net.minecraft.world.level.storage.LevelResource': 'public final class LevelResource { public static final LevelResource ROOT = new LevelResource(); }',
+'net.neoforged.neoforge.server.ServerLifecycleHooks': '''
+public class ServerLifecycleHooks {
+    public static net.minecraft.server.MinecraftServer currentServer;
+    public static net.minecraft.server.MinecraftServer getCurrentServer() { return currentServer; }
+}
+''',
+'dev.bustling.CrowdBounds': 'public class CrowdBounds { public static boolean validPolygon(java.util.List<double[]> points) { return true; } }',
 'net.minecraft.server.level.ServerLevel': '''
 import dev.bustling.*;
 import net.minecraft.core.BlockPos;
@@ -340,13 +351,16 @@ import java.util.List;
 import com.google.gson.Gson;
 public class CrowdData {
     public static List<Emitter> EMITTERS = new ArrayList<>();
+    public static Runnable reloadListener;
     public static void applyJson(String json) { EMITTERS = new Gson().fromJson(json, Root.class).emitters; }
     public static String toJson() { Root root = new Root(); root.emitters = EMITTERS; return new Gson().toJson(root); }
     public static String worldKey() { return "qa-world"; }
     public static class Root { public List<Emitter> emitters = new ArrayList<>(); }
     public static class Emitter {
-        public String id, type, dim, appearance;
-        public double[] a,b;
+        public String id, type, appearance;
+        public String dim = "minecraft:overworld";
+        public double[] a = {0, 64, 0}, b = {8, 64, 8};
+        public List<double[]> polygon;
         public double diffuserRadius, diffuserDecay, stepHeight;
         public double speed = 1, size = 1.875, spacing = .9, spread = 1.2, width = 3, alpha = .35, maxDist = 96, pushRadius = 6;
         public int diffuserLimit, density, count, groundMode;
@@ -385,6 +399,9 @@ public class BustlingNet {
     public static int powerSyncs;
     public static Map<String, Boolean> lastPower;
     public static void broadcast() { syncs++; }
+    public static void broadcastExcept(net.minecraft.server.level.ServerPlayer player) { broadcast(); }
+    public static boolean accepted;
+    public static void acknowledge(net.minecraft.server.level.ServerPlayer player, long sequence, boolean success) { accepted = success; }
     public static void broadcastDevicePower(MinecraftServer server, Map<String, Boolean> changes) {
         powerSyncs++;
         lastPower = Map.copyOf(changes);

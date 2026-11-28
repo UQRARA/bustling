@@ -14,8 +14,8 @@ public final class CrowdSpacingRegression {
         grid.add(upperFloor, 0, 2, 0, .30, 1.875, 0, 0);
         grid.nearby(actor, 0, 0, 0, nearby);
         require(nearby.size() == 1 && nearby.getFirst() == neighbor, "ignore self and separated floors");
-        require(CrowdSpacing.permits(actor, nearby, 0, 0, .20, 0), "keep a .66 block gap");
-        require(!CrowdSpacing.permits(actor, nearby, 0, 0, .30, 0), "reject a step into a body");
+        require(CrowdSpacing.permits(actor, nearby, 0, 0, .27, 0), "comfort padding allows close contact without overlap");
+        require(!CrowdSpacing.permits(actor, nearby, 0, 0, .31, 0), "reject a step into a body");
         require(!CrowdSpacing.permits(actor, nearby, 0, 0, 1.70, 0), "reject crossing even with a clear endpoint");
 
         var newcomer = new CrowdSpacing.Body(4);
@@ -39,7 +39,15 @@ public final class CrowdSpacingRegression {
         require(Math.hypot(push[0] + otherPush[0], push[1] + otherPush[1]) < 1e-8, "contact forces oppose");
         grid.nearby(actor, 0, 0, 0, nearby);
         require(CrowdSpacing.permits(actor, nearby, 0, 0, push[0], push[1]), "existing overlap can separate");
-        System.out.println("PASS crowd body clearance, swept reservations, vertical layers and overlap recovery");
+
+        grid.clear();
+        grid.add(actor, 2.18, 0, 0, .30, 1.875, 2.18, 0);
+        grid.add(neighbor, 1.55, 0, 0, .30, 1.875, 1.55, 0);
+        grid.nearby(actor, 2.18, 0, 0, nearby);
+        require(CrowdSpacing.yieldForRetreat(actor, nearby, 2.18, 0, 0, 0, push), "outer neighbor recognizes a blocked exit");
+        require(push[0] > 0 && Math.abs(push[1]) > push[0], "yielding is primarily sideways and stays outside the player ring");
+        require(!CrowdSpacing.yieldForRetreat(actor, nearby, 2.18, 2, 0, 0, push), "actors clear of the exit keep their own route");
+        System.out.println("PASS crowd body clearance, swept reservations, vertical layers, overlap recovery and player exit priority");
     }
 
     private static void require(boolean condition, String reason) {

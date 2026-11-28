@@ -1,4 +1,4 @@
-"""Run offline regressions against compiled changes. Arguments are loose classes, bbfix.9, and build-cache."""
+"""Run offline regressions against compiled changes. Pass the compiled classes, current JAR, and build tools directory."""
 import os
 from pathlib import Path
 import subprocess
@@ -9,7 +9,7 @@ here = Path(__file__).resolve().parent
 loose, original, tooling = map(Path, sys.argv[1:4])
 cp = [loose, original, tooling/"gson.jar"]
 join = lambda paths: os.pathsep.join(map(str, paths))
-with TemporaryDirectory(prefix="bbfix9-regression-") as temp:
+with TemporaryDirectory(prefix="bustling-regression-") as temp:
     root = Path(temp)
     fixture, classes, config = root/"fixture", root/"classes", root/"config"
     subprocess.run([sys.executable, str(here/"fixture.py"), str(fixture)], check=True)
@@ -18,7 +18,7 @@ with TemporaryDirectory(prefix="bbfix9-regression-") as temp:
                     str(here/"ToolAndDeviceRegression.java"), str(here/"EnvironmentPopulationRegression.java"),
                     str(here/"DevicePowerRegression.java"), str(here/"YsmImportRegression.java"),
                     str(here/"PlayerApproachRegression.java"), str(here/"CrowdSpacingRegression.java"),
-                    str(here/"CopySettingsRegression.java")], check=True)
+                    str(here/"CopySettingsRegression.java"), str(here/"CrowdStorageRegression.java")], check=True)
     subprocess.run(["java", "-Xverify:all", f"-Dbustling.qa.config={config}", "-cp",
                     join([classes, *cp]), "ToolAndDeviceRegression"], check=True)
     environment = ["java", "-Xverify:all", f"-Dbustling.qa.config={root / 'environment-config'}", "-cp",
@@ -35,3 +35,5 @@ with TemporaryDirectory(prefix="bbfix9-regression-") as temp:
                     "dev.bustling.CrowdSpacingRegression"], check=True)
     subprocess.run(["java", "-Xverify:all", f"-Dbustling.qa.config={root / 'copy-config'}",
                     "-cp", join([classes, *cp]), "dev.bustling.CopySettingsRegression"], check=True)
+    subprocess.run(["java", "-Xverify:all", f"-Dbustling.qa.config={root / 'storage-config'}", "-cp",
+                    join([classes, *cp]), "dev.bustling.CrowdStorageRegression"], check=True)
